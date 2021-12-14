@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class StateA : BaseState
 {
-
     [SerializeField]
     private Camera _mainCam;
 
@@ -30,12 +29,12 @@ public class StateA : BaseState
         base.UpdateLogic();
 
         _horizontalInput = Input.GetAxis("Horizontal");
-        _verticalInput = Input.GetAxis("Horizontal");
+        _verticalInput = Input.GetAxis("Vertical");
 
         if (Mathf.Abs(_horizontalInput) > Mathf.Epsilon)
-            StateMachine.ChangeState(((SceneState)StateMachine).StateAInstance);
+            StateMachine.ChangeState(((SceneState)StateMachine).StateBInstance);
 
         if (Mathf.Abs(_verticalInput) > Mathf.Epsilon)
-            StateMachine.ChangeState(((SceneState)StateMachine).StateAInstance);
+            StateMachine.ChangeState(((SceneState)StateMachine).StateBInstance);
     }
 }

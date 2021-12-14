@@ -28,10 +28,10 @@ public class StateB : BaseState
         _verticalInput = Input.GetAxis("Horizontal");
 
         if (Mathf.Abs(_horizontalInput) > Mathf.Epsilon)
-            StateMachine.ChangeState(_sS.StateAInstance);
+            StateMachine.ChangeState(_sS.StateBInstance);
 
         if (Mathf.Abs(_verticalInput) > Mathf.Epsilon)
-            StateMachine.ChangeState(_sS.StateAInstance);
+            StateMachine.ChangeState(_sS.StateBInstance);
     }
 
     public override void UpdatePhysics()

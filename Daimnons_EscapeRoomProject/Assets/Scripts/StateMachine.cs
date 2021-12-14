@@ -21,7 +21,6 @@ public class StateMachine : MonoBehaviour
 
     private void LateUpdate()
     {
-
         if (_currentState != null)
             _currentState.UpdatePhysics();
     }

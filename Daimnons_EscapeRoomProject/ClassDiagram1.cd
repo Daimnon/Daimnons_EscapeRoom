@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="BaseState">
+    <Position X="6.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIAAAIAAAAAAAAAAAAQAAAAEAAAAIAAAAAAAIAA=</HashCode>
+      <FileName>Assets\Scripts\BaseState.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SceneState">
+    <Position X="0.5" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAABBAAAQAAAAAAAAAAAABEA=</HashCode>
+      <FileName>Assets\Scripts\SceneState.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="StateMachine">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAACAABAAAAAAAIABAAAAAAAAAAACAAAAAABA=</HashCode>
+      <FileName>Assets\Scripts\StateMachine.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="StateC">
+    <Position X="3.5" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAACQAAAAgAAAAAAIAAAAAAEAAAAAAABAAAAIAA=</HashCode>
+      <FileName>Assets\Scripts\States\StateC.cs</FileName>
+      <NewMemberFileName>Assets\Scripts\States\StateA.cs</NewMemberFileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="StateB">
+    <Position X="7.5" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAACQIAAAgAAAAAAIAAAAAAEAAAAAAABAAAAIAA=</HashCode>
+      <FileName>Assets\Scripts\States\StateB.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

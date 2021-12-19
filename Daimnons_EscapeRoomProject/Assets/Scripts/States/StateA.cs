@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class StateA : BaseState
 {
-
+    //get references
+    #region Serialized Fields
     [SerializeField]
     private Camera _mainCam;
 
@@ -13,10 +14,16 @@ public class StateA : BaseState
 
     [SerializeField]
     private Collider _playerCol;
+    #endregion
 
+    //movement inputs
     private float _horizontalInput;
     private float _verticalInput;
+
+    //constructor that impliments "StatA" and sM parameters to base constructor
     public StateA(SceneState sM) : base("StateA", sM) { }
+
+    //when starting state
     public override void Enter()
     {
         base.Enter();
@@ -25,17 +32,27 @@ public class StateA : BaseState
         _verticalInput = 0f;
     }
 
+    //when updating state
     public override void UpdateLogic()
     {
         base.UpdateLogic();
-
         _horizontalInput = Input.GetAxis("Horizontal");
-        _verticalInput = Input.GetAxis("Horizontal");
+        _verticalInput = Input.GetAxis("Vertical");
 
-        if (Mathf.Abs(_horizontalInput) > Mathf.Epsilon)
+        //left
+        if (_horizontalInput < 0)
+            StateMachine.ChangeState(((SceneState)StateMachine).StateBInstance);
+        //forward
+        if (_verticalInput > 0)
+            StateMachine.ChangeState(((SceneState)StateMachine).StateCInstance);
+        //right
+        if (_horizontalInput > 0)
+            StateMachine.ChangeState(((SceneState)StateMachine).StateDInstance);
+        //backwards
+        if (_verticalInput > 0)
             StateMachine.ChangeState(((SceneState)StateMachine).StateAInstance);
 
-        if (Mathf.Abs(_verticalInput) > Mathf.Epsilon)
-            StateMachine.ChangeState(((SceneState)StateMachine).StateAInstance);
+        /*if (Mathf.Abs(_verticalInput) > Mathf.Epsilon)
+            StateMachine.ChangeState(((SceneState)StateMachine).StateBInstance);*/
     }
 }

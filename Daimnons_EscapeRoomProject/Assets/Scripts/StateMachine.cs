@@ -39,6 +39,7 @@ public class StateMachine : MonoBehaviour
         return null;
     }
 
+
     private void OnGUI()
     {
         string txt = _currentState != null ? _currentState.Name : "(No Current State)";

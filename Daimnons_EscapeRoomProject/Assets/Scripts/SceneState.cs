@@ -5,10 +5,10 @@ using UnityEngine;
 
 public class SceneState : StateMachine
 {
-    public StateA StateAInstance;
-    public StateB StateBInstance;
-    public StateC StateCInstance;
-    public StateD StateDInstance;
+    public LobbyState LobbyStateInstance;
+    public PhotoToiletIntersection PhotoToiletIntersectionInstance;
+    public PhotographyRoomState PhotographyRoomStateInstance;
+    public ToiletsRoomState ToiletsRoomStateInstance;
 
     public List<GameObject> InteractableGO;
     public List<Interactable> InteractableGOScripts;
@@ -17,15 +17,15 @@ public class SceneState : StateMachine
 
     private void Awake()
     {
-        StateAInstance = new StateA(this);
-        StateBInstance = new StateB(this);
-        StateCInstance = new StateC(this);
-        StateDInstance = new StateD(this);
+        LobbyStateInstance = new LobbyState(this);
+        PhotoToiletIntersectionInstance = new PhotoToiletIntersection(this);
+        PhotographyRoomStateInstance = new PhotographyRoomState(this);
+        ToiletsRoomStateInstance = new ToiletsRoomState(this);
     }
 
     protected override BaseState GetInitialState()
     {
-        return StateAInstance;
+        return LobbyStateInstance;
     }
 
     public void Interact<T>()
@@ -52,19 +52,19 @@ public class SceneState : StateMachine
         switch (currentState.name)
         {
             case "StateA":
-                StateAInstance.GoLeft();
+                LobbyStateInstance.GoLeft();
                 break;
 
             case "StateB":
-                StateBInstance.GoLeft();
+                PhotoToiletIntersectionInstance.GoLeft();
                 break;
 
             case "StateC":
-                StateCInstance.GoLeft();
+                PhotographyRoomStateInstance.GoLeft();
                 break;
 
             case "StateD":
-                StateDInstance.GoLeft();
+                ToiletsRoomStateInstance.GoLeft();
                 break;
             default:
                 break;
@@ -79,19 +79,19 @@ public class SceneState : StateMachine
         switch (currentState.name)
         {
             case "StateA":
-                StateAInstance.GoRight();
+                LobbyStateInstance.GoRight();
                 break;
 
             case "StateB":
-                StateBInstance.GoRight();
+                PhotoToiletIntersectionInstance.GoRight();
                 break;
 
             case "StateC":
-                StateCInstance.GoRight();
+                PhotographyRoomStateInstance.GoRight();
                 break;
 
             case "StateD":
-                StateDInstance.GoRight();
+                ToiletsRoomStateInstance.GoRight();
                 break;
             default:
                 break;

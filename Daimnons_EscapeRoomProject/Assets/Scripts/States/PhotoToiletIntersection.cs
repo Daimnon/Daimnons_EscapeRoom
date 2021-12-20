@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class StateB : BaseState
+public class PhotoToiletIntersection : BaseState
 {
     //get references
     #region Serialized Fields
@@ -21,12 +21,16 @@ public class StateB : BaseState
     private float _verticalInput;
 
     //constructor that impliments "StateB" and sM parameters to base constructor
-    public StateB(SceneState sM) : base("StateB", sM) { }
+    public PhotoToiletIntersection(SceneState sM) : base("Photo Toilet Intersection", sM) { }
 
     //when starting state
     public override void Enter()
     {
         base.Enter();
+
+        (CurrentStateMachine as SceneState).PlayerTr.position = new Vector3(-5.5f, 3.5f, -5f);
+        (CurrentStateMachine as SceneState).PlayerTr.rotation = Quaternion.Euler(0f, -90f, 0f);
+        (CurrentStateMachine as SceneState).PlayerTr.localScale = new Vector3(1.5f, 2, 1.5f);
 
         _horizontalInput = 0f;
         _verticalInput = 0f;
@@ -39,18 +43,18 @@ public class StateB : BaseState
         _horizontalInput = Input.GetAxis("Horizontal");
         _verticalInput = Input.GetAxis("Vertical");
 
-        //left
-        if (_horizontalInput < 0)
-            CurrentStateMachine.ChangeState(((SceneState)CurrentStateMachine).StateBInstance);
-        //forward
-        if (_verticalInput > 0)
-            CurrentStateMachine.ChangeState(((SceneState)CurrentStateMachine).StateCInstance);
-        //right
-        if (_horizontalInput > 0)
-            CurrentStateMachine.ChangeState(((SceneState)CurrentStateMachine).StateDInstance);
-        //backwards
-        if (_verticalInput > 0)
-            CurrentStateMachine.ChangeState(((SceneState)CurrentStateMachine).StateAInstance);
+        //lobby state
+        if (Input.GetKey(KeyCode.Alpha1))
+            CurrentStateMachine.ChangeState(((SceneState)CurrentStateMachine).LobbyStateInstance);
+        //photo & toilet intersection state
+        if (Input.GetKey(KeyCode.Alpha2))
+            CurrentStateMachine.ChangeState(((SceneState)CurrentStateMachine).PhotoToiletIntersectionInstance);
+        //photography room state
+        if (Input.GetKey(KeyCode.Alpha3))
+            CurrentStateMachine.ChangeState(((SceneState)CurrentStateMachine).PhotographyRoomStateInstance);
+        //toilets room state
+        if (Input.GetKey(KeyCode.Alpha4))
+            CurrentStateMachine.ChangeState(((SceneState)CurrentStateMachine).ToiletsRoomStateInstance);
 
         /*if (Mathf.Abs(_verticalInput) > Mathf.Epsilon)
             StateMachine.ChangeState(((SceneState)StateMachine).StateBInstance);*/
@@ -70,12 +74,12 @@ public class StateB : BaseState
     public void GoLeft()
     {
         Debug.Log("Executed State B Go Left");
-        CurrentStateMachine.ChangeState(((SceneState)CurrentStateMachine).StateCInstance);
+        CurrentStateMachine.ChangeState(((SceneState)CurrentStateMachine).PhotographyRoomStateInstance);
     }
 
     public void GoRight()
     {
         Debug.Log("Executed State B Go Right");
-        CurrentStateMachine.ChangeState(((SceneState)CurrentStateMachine).StateDInstance);
+        CurrentStateMachine.ChangeState(((SceneState)CurrentStateMachine).ToiletsRoomStateInstance);
     }
 }

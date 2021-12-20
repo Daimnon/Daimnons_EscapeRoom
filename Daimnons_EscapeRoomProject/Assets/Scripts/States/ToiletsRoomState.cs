@@ -63,12 +63,22 @@ public class ToiletsRoomState : BaseState
     public void GoLeft()
     {
         Debug.Log("Executed State D Go Left");
-        CurrentStateMachine.ChangeState(((SceneState)CurrentStateMachine).LobbyStateInstance);
+        CurrentStateMachine.ChangeState(((SceneState)CurrentStateMachine).PhotoToiletIntersectionInstance);
     }
 
     public void GoRight()
     {
         Debug.Log("Executed State D Go Right");
-        CurrentStateMachine.ChangeState(((SceneState)CurrentStateMachine).LobbyStateInstance);
+        CurrentStateMachine.ChangeState(((SceneState)CurrentStateMachine).PhotoToiletIntersectionInstance);
+    }
+
+    public BaseState ReturnCurrentState()
+    {
+        if ((CurrentStateMachine as SceneState).IsCurrentState)
+        {
+            return this;
+        }
+
+        return CurrentBaseState<BaseState>();
     }
 }

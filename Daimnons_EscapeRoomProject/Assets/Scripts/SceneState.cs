@@ -14,6 +14,9 @@ public class SceneState : StateMachine
     public List<Interactable> InteractableGOScripts;
     public Transform MainCamTr, PlayerTr;
     public Button LeftArrowUI, RightArrowUI;
+    public bool IsCurrentState;
+
+    private Vector2 _mousePos;
 
     private void Awake()
     {
@@ -27,6 +30,8 @@ public class SceneState : StateMachine
     {
         return LobbyStateInstance;
     }
+
+    protected override BaseState C
 
     public void Interact<T>()
     {
@@ -46,10 +51,10 @@ public class SceneState : StateMachine
     public void GoLeft()
     {
         //not returning correct state, returning only 1st state
-        StateMachine currentState = GetInitialState().CurrentState<StateMachine>();
+        BaseState currentState = CurrentState;
         Debug.Log("Executing SceneState Go Left");
 
-        switch (currentState.name)
+        switch (currentState.Name)
         {
             case "StateA":
                 LobbyStateInstance.GoLeft();

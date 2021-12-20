@@ -82,4 +82,14 @@ public class PhotoToiletIntersection : BaseState
         Debug.Log("Executed State B Go Right");
         CurrentStateMachine.ChangeState(((SceneState)CurrentStateMachine).ToiletsRoomStateInstance);
     }
+
+    public BaseState ReturnCurrentState()
+    {
+        if ((CurrentStateMachine as SceneState).IsCurrentState)
+        {
+            return this;
+        }
+
+        return CurrentBaseState<BaseState>();
+    }
 }

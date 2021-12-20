@@ -62,11 +62,21 @@ public class PhotographyRoomState : BaseState
 
     public void GoLeft()
     {
-
+        CurrentStateMachine.ChangeState(((SceneState)CurrentStateMachine).PhotoToiletIntersectionInstance);
     }
 
     public void GoRight()
     {
+        CurrentStateMachine.ChangeState(((SceneState)CurrentStateMachine).PhotoToiletIntersectionInstance);
+    }
 
+    public BaseState ReturnCurrentState()
+    {
+        if ((CurrentStateMachine as SceneState).IsCurrentState)
+        {
+            return this;
+        }
+
+        return CurrentBaseState<BaseState>();
     }
 }

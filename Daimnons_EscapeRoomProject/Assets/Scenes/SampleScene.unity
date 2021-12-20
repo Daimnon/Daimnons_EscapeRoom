@@ -136,7 +136,7 @@ GameObject:
   - component: {fileID: 27859944}
   - component: {fileID: 27859943}
   m_Layer: 0
-  m_Name: LobbyEasternWallLeft
+  m_Name: Lobby EasternWallLeft
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -216,7 +216,7 @@ Transform:
   m_LocalScale: {x: 1, y: 8, z: 32.5}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &38050321
 GameObject:
@@ -231,7 +231,7 @@ GameObject:
   - component: {fileID: 38050323}
   - component: {fileID: 38050322}
   m_Layer: 0
-  m_Name: ToiletsRoomNorthernWall (6)
+  m_Name: Vent WesternWallMiddle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -311,7 +311,7 @@ Transform:
   m_LocalScale: {x: 1, y: 3, z: 2}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 51
+  m_RootOrder: 36
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &85486780
 GameObject:
@@ -377,7 +377,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 34
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &151056039
 GameObject:
@@ -472,7 +472,7 @@ Transform:
   m_LocalScale: {x: 80, y: 1, z: 20}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 17
+  m_RootOrder: 43
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &154075384
 GameObject:
@@ -487,7 +487,7 @@ GameObject:
   - component: {fileID: 154075386}
   - component: {fileID: 154075385}
   m_Layer: 0
-  m_Name: GymSouthernWall
+  m_Name: Gym SouthernWall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -525,7 +525,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 394e9f295f17eb34fab2bf71bfbb7b7e, type: 2}
+  - {fileID: 2100000, guid: b167d9023ea9072448b580d16d682b89, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -567,7 +567,7 @@ Transform:
   m_LocalScale: {x: 28, y: 8, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 22
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &174794466
 GameObject:
@@ -662,7 +662,7 @@ Transform:
   m_LocalScale: {x: 5, y: 7, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 270, z: 0}
 --- !u!1 &210197645
 GameObject:
@@ -934,11 +934,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 210197645}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -22.5, y: 9.5, z: -22.5}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -56.25, y: 9.5, z: -22.5}
+  m_LocalScale: {x: 2.5, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 18
+  m_RootOrder: 55
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &250903233
 GameObject:
@@ -953,7 +953,7 @@ GameObject:
   - component: {fileID: 250903235}
   - component: {fileID: 250903234}
   m_Layer: 0
-  m_Name: Gym Door (1)
+  m_Name: Library Door
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1033,7 +1033,7 @@ Transform:
   m_LocalScale: {x: 5, y: 7, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 39
+  m_RootOrder: 52
   m_LocalEulerAnglesHint: {x: 0, y: 270, z: 0}
 --- !u!1 &271243718
 GameObject:
@@ -1048,7 +1048,7 @@ GameObject:
   - component: {fileID: 271243720}
   - component: {fileID: 271243719}
   m_Layer: 0
-  m_Name: ToiletsRoomNorthernWall (5)
+  m_Name: Vent SouthernWall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1128,7 +1128,7 @@ Transform:
   m_LocalScale: {x: 22, y: 3, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 50
+  m_RootOrder: 40
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &286002812
 GameObject:
@@ -1223,7 +1223,7 @@ Transform:
   m_LocalScale: {x: 1, y: 8, z: 70}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 24
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &297278513
 GameObject:
@@ -1238,7 +1238,7 @@ GameObject:
   - component: {fileID: 297278515}
   - component: {fileID: 297278514}
   m_Layer: 0
-  m_Name: ToiletsRoomNorthernWall (10)
+  m_Name: Vent BottomWall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1318,7 +1318,7 @@ Transform:
   m_LocalScale: {x: 25, y: 1, z: 3}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 55
+  m_RootOrder: 42
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &310838522
 GameObject:
@@ -1413,7 +1413,7 @@ Transform:
   m_LocalScale: {x: 110, y: 1, z: 70}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &355311190
 GameObject:
@@ -1428,7 +1428,7 @@ GameObject:
   - component: {fileID: 355311192}
   - component: {fileID: 355311191}
   m_Layer: 0
-  m_Name: LabNorthernWall
+  m_Name: Lab NorthernWall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1466,7 +1466,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 52158bca2ed03cb4c849e461b4070fac, type: 2}
+  - {fileID: 2100000, guid: 52adaf1933c22f54e87eba3ffc57ceda, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1508,7 +1508,7 @@ Transform:
   m_LocalScale: {x: 50, y: 8, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 21
+  m_RootOrder: 48
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &360990910
 GameObject:
@@ -1523,7 +1523,7 @@ GameObject:
   - component: {fileID: 360990912}
   - component: {fileID: 360990911}
   m_Layer: 0
-  m_Name: ToiletsRoomNorthernWall (7)
+  m_Name: Vent WesternWall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1603,7 +1603,7 @@ Transform:
   m_LocalScale: {x: 1, y: 3, z: 7}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 52
+  m_RootOrder: 35
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &375246584
 GameObject:
@@ -1618,7 +1618,7 @@ GameObject:
   - component: {fileID: 375246586}
   - component: {fileID: 375246585}
   m_Layer: 0
-  m_Name: LobbyWesternWallLeft
+  m_Name: Lobby WesternWallLeft
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1698,7 +1698,7 @@ Transform:
   m_LocalScale: {x: 1, y: 8, z: 10}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 22
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &388455904
 GameObject:
@@ -1713,7 +1713,7 @@ GameObject:
   - component: {fileID: 388455906}
   - component: {fileID: 388455905}
   m_Layer: 0
-  m_Name: LobbySouthernWallRight (6)
+  m_Name: Lobby NorthernWallRight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1793,7 +1793,7 @@ Transform:
   m_LocalScale: {x: 22.5, y: 8, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 35
+  m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &441975892
 GameObject:
@@ -1846,7 +1846,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 394e9f295f17eb34fab2bf71bfbb7b7e, type: 2}
+  - {fileID: 2100000, guid: dbd1e38631f81e94e9a2136e71a9239a, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1888,7 +1888,7 @@ Transform:
   m_LocalScale: {x: 28, y: 8, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 31
+  m_RootOrder: 29
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &522435993
 GameObject:
@@ -1903,7 +1903,7 @@ GameObject:
   - component: {fileID: 522435995}
   - component: {fileID: 522435994}
   m_Layer: 0
-  m_Name: LobbyWesternWallRight
+  m_Name: Lobby WesternWallRight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1983,7 +1983,7 @@ Transform:
   m_LocalScale: {x: 1, y: 8, z: 20}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 16
+  m_RootOrder: 26
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &565448585
 GameObject:
@@ -2130,7 +2130,7 @@ GameObject:
   - component: {fileID: 580625438}
   - component: {fileID: 580625437}
   m_Layer: 0
-  m_Name: ToiletsRoomNorthernWall (1)
+  m_Name: ToiletsRoom EasternWallTop
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2210,7 +2210,7 @@ Transform:
   m_LocalScale: {x: 28, y: 4, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 46
+  m_RootOrder: 31
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &610566211
 GameObject:
@@ -2225,7 +2225,7 @@ GameObject:
   - component: {fileID: 610566213}
   - component: {fileID: 610566212}
   m_Layer: 0
-  m_Name: LobbySouthernWallTop (4)
+  m_Name: Lobby NorthernWallTop
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2305,7 +2305,7 @@ Transform:
   m_LocalScale: {x: 5, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 37
+  m_RootOrder: 20
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &648479989
 GameObject:
@@ -2320,7 +2320,7 @@ GameObject:
   - component: {fileID: 648479991}
   - component: {fileID: 648479990}
   m_Layer: 0
-  m_Name: LibraryEasternWall
+  m_Name: Library EasternWall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2400,7 +2400,7 @@ Transform:
   m_LocalScale: {x: 1, y: 8, z: 20}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 27
+  m_RootOrder: 54
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &680746372
 GameObject:
@@ -2415,7 +2415,7 @@ GameObject:
   - component: {fileID: 680746374}
   - component: {fileID: 680746373}
   m_Layer: 0
-  m_Name: LobbyWesternWallTopRight
+  m_Name: Lobby WesternWallTopRight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2495,7 +2495,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 5}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_RootOrder: 25
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &705507993
 GameObject:
@@ -2588,7 +2588,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
 --- !u!1 &762602657
 GameObject:
@@ -2603,7 +2603,7 @@ GameObject:
   - component: {fileID: 762602659}
   - component: {fileID: 762602658}
   m_Layer: 0
-  m_Name: GymNorthernWall
+  m_Name: Gym NorthernWall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2641,7 +2641,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 394e9f295f17eb34fab2bf71bfbb7b7e, type: 2}
+  - {fileID: 2100000, guid: b167d9023ea9072448b580d16d682b89, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2683,7 +2683,7 @@ Transform:
   m_LocalScale: {x: 28, y: 8, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 26
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!43 &783289281
 Mesh:
@@ -2691,7 +2691,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh24552
+  m_Name: pb_Mesh74748
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -2862,7 +2862,7 @@ GameObject:
   - component: {fileID: 851042642}
   - component: {fileID: 851042641}
   m_Layer: 0
-  m_Name: ToiletsRoomNorthernWall
+  m_Name: ToiletsRoom EasternWallBottom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2942,7 +2942,7 @@ Transform:
   m_LocalScale: {x: 28, y: 2, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 30
+  m_RootOrder: 34
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &898666427
 GameObject:
@@ -2957,7 +2957,7 @@ GameObject:
   - component: {fileID: 898666429}
   - component: {fileID: 898666428}
   m_Layer: 0
-  m_Name: LabWesternWall (1)
+  m_Name: Lab WesternWallTop
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3037,7 +3037,7 @@ Transform:
   m_LocalScale: {x: 1, y: 4, z: 20}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 43
+  m_RootOrder: 44
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &935836692
 GameObject:
@@ -3052,7 +3052,7 @@ GameObject:
   - component: {fileID: 935836694}
   - component: {fileID: 935836693}
   m_Layer: 0
-  m_Name: LabWesternWall
+  m_Name: Lab WesternWallBottom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3132,7 +3132,7 @@ Transform:
   m_LocalScale: {x: 1, y: 2, z: 20}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 20
+  m_RootOrder: 47
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &963194225
 GameObject:
@@ -3278,7 +3278,7 @@ Transform:
   m_Children:
   - {fileID: 963194228}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
 --- !u!1 &987577471
 GameObject:
@@ -3293,7 +3293,7 @@ GameObject:
   - component: {fileID: 987577474}
   - component: {fileID: 987577473}
   m_Layer: 0
-  m_Name: LobbySouthernWallLeft
+  m_Name: Lobby SouthernWallLeft
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3311,7 +3311,7 @@ Transform:
   m_LocalScale: {x: 22.5, y: 8, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &987577473
 BoxCollider:
@@ -3520,7 +3520,7 @@ GameObject:
   - component: {fileID: 1081341371}
   - component: {fileID: 1081341370}
   m_Layer: 0
-  m_Name: LobbySouthernWallLeft (1)
+  m_Name: Lobby NorthernWallLeft
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3600,7 +3600,7 @@ Transform:
   m_LocalScale: {x: 22.5, y: 8, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 36
+  m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1120891874
 GameObject:
@@ -3615,7 +3615,7 @@ GameObject:
   - component: {fileID: 1120891876}
   - component: {fileID: 1120891875}
   m_Layer: 0
-  m_Name: ToiletsRoomNorthernWall (4)
+  m_Name: Vent NorthernWall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3695,7 +3695,7 @@ Transform:
   m_LocalScale: {x: 25, y: 3, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 49
+  m_RootOrder: 39
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1140393140
 GameObject:
@@ -3790,7 +3790,7 @@ Transform:
   m_LocalScale: {x: 5, y: 7, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 32
+  m_RootOrder: 28
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!1 &1179838285
 GameObject:
@@ -3805,7 +3805,7 @@ GameObject:
   - component: {fileID: 1179838287}
   - component: {fileID: 1179838286}
   m_Layer: 0
-  m_Name: ToiletsRoomNorthernWall (3)
+  m_Name: ToiletsRoom EasternWallMiddleLeft
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3885,7 +3885,7 @@ Transform:
   m_LocalScale: {x: 3, y: 3, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 48
+  m_RootOrder: 32
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1181544161
 GameObject:
@@ -3900,7 +3900,7 @@ GameObject:
   - component: {fileID: 1181544163}
   - component: {fileID: 1181544162}
   m_Layer: 0
-  m_Name: ToiletsRoomNorthernWall (11)
+  m_Name: Vent WesternWallBottomLeft
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3980,7 +3980,7 @@ Transform:
   m_LocalScale: {x: 3, y: 1, z: 3}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 56
+  m_RootOrder: 38
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1241293796
 GameObject:
@@ -3995,7 +3995,7 @@ GameObject:
   - component: {fileID: 1241293798}
   - component: {fileID: 1241293797}
   m_Layer: 0
-  m_Name: LobbyEasternWallRight
+  m_Name: Lobby EasternWallRight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4075,7 +4075,7 @@ Transform:
   m_LocalScale: {x: 1, y: 8, z: 32.5}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1252175802
 GameObject:
@@ -4170,7 +4170,7 @@ Transform:
   m_LocalScale: {x: 5, y: 7, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 29
+  m_RootOrder: 27
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!1 &1284936416
 GameObject:
@@ -4185,7 +4185,7 @@ GameObject:
   - component: {fileID: 1284936418}
   - component: {fileID: 1284936417}
   m_Layer: 0
-  m_Name: LobbyEasternWallTop
+  m_Name: Lobby EasternWallTop
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4265,7 +4265,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 5}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1287250267
 GameObject:
@@ -4280,7 +4280,7 @@ GameObject:
   - component: {fileID: 1287250269}
   - component: {fileID: 1287250268}
   m_Layer: 0
-  m_Name: LabWesternWall (2)
+  m_Name: Lab WesternWallMiddleLeft
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4360,7 +4360,7 @@ Transform:
   m_LocalScale: {x: 1, y: 3, z: 14}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 44
+  m_RootOrder: 45
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1288589203
 GameObject:
@@ -4456,7 +4456,7 @@ RectTransform:
   - {fileID: 1036322557}
   - {fileID: 565448586}
   m_Father: {fileID: 0}
-  m_RootOrder: 33
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -4476,7 +4476,7 @@ GameObject:
   - component: {fileID: 1307063617}
   - component: {fileID: 1307063616}
   m_Layer: 0
-  m_Name: LobbySouthernWallRight
+  m_Name: Lobby SouthernWallRight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4494,7 +4494,7 @@ Transform:
   m_LocalScale: {x: 22.5, y: 8, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &1307063616
 BoxCollider:
@@ -4593,6 +4593,7 @@ MonoBehaviour:
   PlayerTr: {fileID: 982909037}
   LeftArrowUI: {fileID: 1036322560}
   RightArrowUI: {fileID: 565448589}
+  IsCurrentState: 0
 --- !u!4 &1379089897
 Transform:
   m_ObjectHideFlags: 0
@@ -4620,7 +4621,7 @@ GameObject:
   - component: {fileID: 1381220355}
   - component: {fileID: 1381220354}
   m_Layer: 0
-  m_Name: LabWesternWall (3)
+  m_Name: Lab WesternWallMiddleRight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4700,7 +4701,7 @@ Transform:
   m_LocalScale: {x: 1, y: 3, z: 3}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 45
+  m_RootOrder: 46
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1514620661
 GameObject:
@@ -4715,7 +4716,7 @@ GameObject:
   - component: {fileID: 1514620663}
   - component: {fileID: 1514620662}
   m_Layer: 0
-  m_Name: LobbySouthernWallRight (7)
+  m_Name: Lab EasternWallLeft
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4795,7 +4796,7 @@ Transform:
   m_LocalScale: {x: 1, y: 8, z: 7.5}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 40
+  m_RootOrder: 49
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1565373495
 GameObject:
@@ -4810,7 +4811,7 @@ GameObject:
   - component: {fileID: 1565373497}
   - component: {fileID: 1565373496}
   m_Layer: 0
-  m_Name: LobbySouthernWallRight (8)
+  m_Name: Lab EasternWallRight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4890,7 +4891,7 @@ Transform:
   m_LocalScale: {x: 1, y: 8, z: 7.5}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 41
+  m_RootOrder: 51
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1676203116
 GameObject:
@@ -4905,7 +4906,7 @@ GameObject:
   - component: {fileID: 1676203118}
   - component: {fileID: 1676203117}
   m_Layer: 0
-  m_Name: ToiletsRoomNorthernWall (8)
+  m_Name: Vent TopWall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4985,7 +4986,7 @@ Transform:
   m_LocalScale: {x: 25, y: 1, z: 3}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 53
+  m_RootOrder: 41
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1777969012
 GameObject:
@@ -5000,7 +5001,7 @@ GameObject:
   - component: {fileID: 1777969014}
   - component: {fileID: 1777969013}
   m_Layer: 0
-  m_Name: ToiletsRoomNorthernWall (9)
+  m_Name: Vent WesternWallTopLeft
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5080,7 +5081,7 @@ Transform:
   m_LocalScale: {x: 3, y: 1, z: 3}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 54
+  m_RootOrder: 37
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1780559390
 GameObject:
@@ -5175,7 +5176,7 @@ Transform:
   m_LocalScale: {x: 5, y: 7, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1833261233
 GameObject:
@@ -5190,7 +5191,7 @@ GameObject:
   - component: {fileID: 1833261235}
   - component: {fileID: 1833261234}
   m_Layer: 0
-  m_Name: LobbySouthernWallTop (5)
+  m_Name: Lab EasternWallTop
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5270,7 +5271,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 5}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 42
+  m_RootOrder: 50
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1835979852
 GameObject:
@@ -5285,7 +5286,7 @@ GameObject:
   - component: {fileID: 1835979855}
   - component: {fileID: 1835979854}
   m_Layer: 0
-  m_Name: LobbySouthernWallTop
+  m_Name: Lobby SouthernWallTop
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5303,7 +5304,7 @@ Transform:
   m_LocalScale: {x: 5, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &1835979854
 BoxCollider:
@@ -5380,7 +5381,7 @@ GameObject:
   - component: {fileID: 1943075695}
   - component: {fileID: 1943075694}
   m_Layer: 0
-  m_Name: LobbySouthernDoor (1)
+  m_Name: Lab Door
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5460,7 +5461,7 @@ Transform:
   m_LocalScale: {x: 5, y: 7, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 38
+  m_RootOrder: 21
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1954970332
 GameObject:
@@ -5475,7 +5476,7 @@ GameObject:
   - component: {fileID: 1954970334}
   - component: {fileID: 1954970333}
   m_Layer: 0
-  m_Name: ToiletsRoomNorthernWall (2)
+  m_Name: ToiletsRoom EasternWallMiddleRight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5555,7 +5556,7 @@ Transform:
   m_LocalScale: {x: 22, y: 3, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 47
+  m_RootOrder: 33
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2001843440
 GameObject:
@@ -5570,7 +5571,7 @@ GameObject:
   - component: {fileID: 2001843442}
   - component: {fileID: 2001843441}
   m_Layer: 0
-  m_Name: PhotographyRoomToiletWesternWall
+  m_Name: Photography & Toilet WesternWall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5650,7 +5651,7 @@ Transform:
   m_LocalScale: {x: 1, y: 8, z: 70}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 25
+  m_RootOrder: 30
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2015289655
 GameObject:
@@ -5665,7 +5666,7 @@ GameObject:
   - component: {fileID: 2015289657}
   - component: {fileID: 2015289656}
   m_Layer: 0
-  m_Name: LobbyWesternWallMiddle
+  m_Name: Lobby WesternWallMiddle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5745,7 +5746,7 @@ Transform:
   m_LocalScale: {x: 1, y: 8, z: 30}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 24
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2035464025
 GameObject:
@@ -5760,7 +5761,7 @@ GameObject:
   - component: {fileID: 2035464027}
   - component: {fileID: 2035464026}
   m_Layer: 0
-  m_Name: LobbyWesternWallTopLeft
+  m_Name: Lobby WesternWallTopLeft
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5840,7 +5841,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 5}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 23
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2050760490
 GameObject:
@@ -5855,7 +5856,7 @@ GameObject:
   - component: {fileID: 2050760492}
   - component: {fileID: 2050760491}
   m_Layer: 0
-  m_Name: LibraryNorthernWall
+  m_Name: Library NorthernWall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5893,7 +5894,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 394e9f295f17eb34fab2bf71bfbb7b7e, type: 2}
+  - {fileID: 2100000, guid: 52adaf1933c22f54e87eba3ffc57ceda, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -5935,7 +5936,7 @@ Transform:
   m_LocalScale: {x: 28, y: 8, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 28
+  m_RootOrder: 53
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2130065539
 GameObject:
@@ -5950,7 +5951,7 @@ GameObject:
   - component: {fileID: 2130065541}
   - component: {fileID: 2130065540}
   m_Layer: 0
-  m_Name: PhotographyRoomSouthernWall
+  m_Name: PhotographyRoom SouthernWall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5988,7 +5989,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 394e9f295f17eb34fab2bf71bfbb7b7e, type: 2}
+  - {fileID: 2100000, guid: dbd1e38631f81e94e9a2136e71a9239a, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -6030,7 +6031,7 @@ Transform:
   m_LocalScale: {x: 28, y: 8, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 23
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &4070526841624571959
 PrefabInstance:
@@ -6045,7 +6046,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5894458030223970704, guid: f57bede8772a41e4a9ec69502cf5ab18, type: 3}
       propertyPath: m_RootOrder
-      value: 19
+      value: 56
       objectReference: {fileID: 0}
     - target: {fileID: 5894458030223970704, guid: f57bede8772a41e4a9ec69502cf5ab18, type: 3}
       propertyPath: m_LocalPosition.x

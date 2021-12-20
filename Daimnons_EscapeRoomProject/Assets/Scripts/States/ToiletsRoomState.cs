@@ -21,7 +21,7 @@ public class ToiletsRoomState : BaseState
     private float _verticalInput;
 
     //constructor that impliments "StateD" and sM parameters to base constructor
-    public ToiletsRoomState(SceneState sM) : base("Toilets Room", sM) { }
+    public ToiletsRoomState(SceneState sM) : base("ToiletsRoomState", sM) { }
 
     //when starting state
     public override void Enter()
@@ -43,32 +43,34 @@ public class ToiletsRoomState : BaseState
         _horizontalInput = Input.GetAxis("Horizontal");
         _verticalInput = Input.GetAxis("Vertical");
 
-        //lobby state
+        Hacks();
+    }
+
+    public void Hacks()
+    {
+        //lobby state quickhack
         if (Input.GetKey(KeyCode.Alpha1))
             CurrentStateMachine.ChangeState(((SceneState)CurrentStateMachine).LobbyStateInstance);
-        //photo & toilet intersection state
+        //photo & toilet intersection state quickhack
         if (Input.GetKey(KeyCode.Alpha2))
             CurrentStateMachine.ChangeState(((SceneState)CurrentStateMachine).PhotoToiletIntersectionInstance);
-        //photography room state
+        //photography room state quickhack
         if (Input.GetKey(KeyCode.Alpha3))
             CurrentStateMachine.ChangeState(((SceneState)CurrentStateMachine).PhotographyRoomStateInstance);
-        //toilets room state
+        //toilets room state quickhack
         if (Input.GetKey(KeyCode.Alpha4))
             CurrentStateMachine.ChangeState(((SceneState)CurrentStateMachine).ToiletsRoomStateInstance);
-
-        /*if (Mathf.Abs(_verticalInput) > Mathf.Epsilon)
-            StateMachine.ChangeState(((SceneState)StateMachine).StateBInstance);*/
     }
 
     public void GoLeft()
     {
-        Debug.Log("Executed State D Go Left");
-        CurrentStateMachine.ChangeState(((SceneState)CurrentStateMachine).LobbyStateInstance);
+        Debug.Log("Executed Toilets Room Go Left");
+        CurrentStateMachine.ChangeState(((SceneState)CurrentStateMachine).PhotoToiletIntersectionInstance);
     }
 
     public void GoRight()
     {
-        Debug.Log("Executed State D Go Right");
-        CurrentStateMachine.ChangeState(((SceneState)CurrentStateMachine).LobbyStateInstance);
+        Debug.Log("Executed Toilets Room Go Right");
+        CurrentStateMachine.ChangeState(((SceneState)CurrentStateMachine).PhotoToiletIntersectionInstance);
     }
 }

@@ -41,18 +41,30 @@ public class StateD : BaseState
 
         //left
         if (_horizontalInput < 0)
-            StateMachine.ChangeState(((SceneState)StateMachine).StateBInstance);
+            CurrentStateMachine.ChangeState(((SceneState)CurrentStateMachine).StateBInstance);
         //forward
         if (_verticalInput > 0)
-            StateMachine.ChangeState(((SceneState)StateMachine).StateCInstance);
+            CurrentStateMachine.ChangeState(((SceneState)CurrentStateMachine).StateCInstance);
         //right
         if (_horizontalInput > 0)
-            StateMachine.ChangeState(((SceneState)StateMachine).StateDInstance);
+            CurrentStateMachine.ChangeState(((SceneState)CurrentStateMachine).StateDInstance);
         //backwards
         if (_verticalInput > 0)
-            StateMachine.ChangeState(((SceneState)StateMachine).StateAInstance);
+            CurrentStateMachine.ChangeState(((SceneState)CurrentStateMachine).StateAInstance);
 
         /*if (Mathf.Abs(_verticalInput) > Mathf.Epsilon)
             StateMachine.ChangeState(((SceneState)StateMachine).StateBInstance);*/
+    }
+
+    public void GoLeft()
+    {
+        Debug.Log("Executed State D Go Left");
+        CurrentStateMachine.ChangeState(((SceneState)CurrentStateMachine).StateAInstance);
+    }
+
+    public void GoRight()
+    {
+        Debug.Log("Executed State D Go Right");
+        CurrentStateMachine.ChangeState(((SceneState)CurrentStateMachine).StateAInstance);
     }
 }

@@ -5,14 +5,20 @@ using UnityEngine;
 public class BaseState
 {
     public string Name;
-    protected StateMachine StateMachine;
+    public string CurrentStateName;
+    protected StateMachine CurrentStateMachine;
     public BaseState(string name, StateMachine sM)
     {
         Name = name;
-        StateMachine = sM;
+        CurrentStateMachine = sM;
     }
     public virtual void Enter() { }
     public virtual void UpdateLogic() { }
     public virtual void UpdatePhysics() { }
     public virtual void Exit() { }
+
+    public StateMachine CurrentState<T>() where T : StateMachine
+    {
+        return CurrentStateMachine;
+    }
 }

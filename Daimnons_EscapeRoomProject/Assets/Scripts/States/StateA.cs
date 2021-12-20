@@ -4,18 +4,6 @@ using UnityEngine;
 
 public class StateA : BaseState
 {
-    //get references
-    #region Serialized Fields
-    [SerializeField]
-    private Camera _mainCam;
-
-    [SerializeField]
-    private Transform _mainCamTr;
-
-    [SerializeField]
-    private Collider _playerCol;
-    #endregion
-
     //movement inputs
     private float _horizontalInput;
     private float _verticalInput;
@@ -28,31 +16,42 @@ public class StateA : BaseState
     {
         base.Enter();
 
-        _horizontalInput = 0f;
-        _verticalInput = 0f;
+        (CurrentStateMachine as SceneState).PlayerTr.position = new Vector3(0, 3.5f, -33.25f);
+        (CurrentStateMachine as SceneState).PlayerTr.rotation = Quaternion.Euler(0, 0, 0);
+        (CurrentStateMachine as SceneState).PlayerTr.localScale = new Vector3(1.5f, 2, 1.5f);
     }
 
     //when updating state
     public override void UpdateLogic()
     {
         base.UpdateLogic();
-        _horizontalInput = Input.GetAxis("Horizontal");
-        _verticalInput = Input.GetAxis("Vertical");
 
         //left
         if (_horizontalInput < 0)
-            StateMachine.ChangeState(((SceneState)StateMachine).StateBInstance);
+            CurrentStateMachine.ChangeState(((SceneState)CurrentStateMachine).StateBInstance);
         //forward
         if (_verticalInput > 0)
-            StateMachine.ChangeState(((SceneState)StateMachine).StateCInstance);
+            CurrentStateMachine.ChangeState(((SceneState)CurrentStateMachine).StateCInstance);
         //right
         if (_horizontalInput > 0)
-            StateMachine.ChangeState(((SceneState)StateMachine).StateDInstance);
+            CurrentStateMachine.ChangeState(((SceneState)CurrentStateMachine).StateDInstance);
         //backwards
         if (_verticalInput > 0)
-            StateMachine.ChangeState(((SceneState)StateMachine).StateAInstance);
+            CurrentStateMachine.ChangeState(((SceneState)CurrentStateMachine).StateAInstance);
 
         /*if (Mathf.Abs(_verticalInput) > Mathf.Epsilon)
             StateMachine.ChangeState(((SceneState)StateMachine).StateBInstance);*/
+    }
+
+    public void GoLeft()
+    {
+        Debug.Log("Executed State A Go Left");
+        CurrentStateMachine.ChangeState(((SceneState)CurrentStateMachine).StateBInstance);
+    }
+
+    public void GoRight()
+    {
+        Debug.Log("Executed State A Go Right");
+        //CurrentStateMachine.ChangeState(((SceneState)CurrentStateMachine).StateBInstance);
     }
 }

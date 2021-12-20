@@ -45,6 +45,7 @@ public class SceneState : StateMachine
 
     public void GoLeft()
     {
+        //not returning correct state, returning only 1st state
         StateMachine currentState = GetInitialState().CurrentState<StateMachine>();
         Debug.Log("Executing SceneState Go Left");
 

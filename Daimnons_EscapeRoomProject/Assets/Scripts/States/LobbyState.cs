@@ -4,9 +4,6 @@ using UnityEngine;
 
 public class LobbyState : BaseState
 {
-    //movement inputs
-    private float _mouseX;
-    private float _mouseY;
 
     //constructor that impliments "StatA" and sM parameters to base constructor
     public LobbyState(SceneState sM) : base("LobbyState", sM) { }
@@ -15,7 +12,9 @@ public class LobbyState : BaseState
     public override void Enter()
     {
         base.Enter();
+
         (CurrentStateMachine as SceneState).IsCurrentState = true;
+
         (CurrentStateMachine as SceneState).PlayerTr.position = new Vector3(0f, 3.5f, -5f);
         (CurrentStateMachine as SceneState).PlayerTr.rotation = Quaternion.Euler(0f, 0f, 0f);
         (CurrentStateMachine as SceneState).PlayerTr.localScale = new Vector3(1.5f, 2, 1.5f);

@@ -6,6 +6,7 @@ public class StateMachine : MonoBehaviour
 {
     private BaseState _currentState;
     public BaseState CurrentState { get => _currentState; }
+
     void Start()
     {
         _currentState = GetInitialState();

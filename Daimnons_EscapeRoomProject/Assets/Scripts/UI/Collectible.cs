@@ -11,10 +11,10 @@ public class Collectible : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
     private UIManager _uIManager;
 
     [SerializeField]
-    private Transform _equippedSlot, _playerTr, _mainCam;
+    private Transform _playerTr, _mainCam;
 
     [SerializeField]
-    private Image _itemImage;
+    private Image _itemImage; //_equippedSlot
 
     [SerializeField]
     private Renderer _render;
@@ -22,26 +22,34 @@ public class Collectible : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
 
     #region Fields
     private Vector3 _originalPos;
+
+    [SerializeField]
+    private int _delayCounter = 0, _targetDelay = 2;
+    private const float _maxRayDistance = 20f;
     private bool _isMouseOver = false, _isItemEquipped = false;
-    private const float maxRayDistance = 20f;
     #endregion
 
     public bool IsItemAquired = false;
 
     private void Awake()
     {
-        _originalPos = transform.position;
+        _originalPos = _itemImage.transform.position;
     }
 
     void Update()
     {
         RaycastHit hit;
-
-        if (Physics.Raycast(_mainCam.position, _mainCam.forward, out hit, maxRayDistance) && Input.GetMouseButtonDown(0))
+        
+        if (Physics.Raycast(_mainCam.position, _mainCam.forward, out hit, _maxRayDistance) && Input.GetMouseButtonDown(0))
         {
+            _delayCounter++;
+
+            if (_delayCounter != _targetDelay)
+                return;
+
             Debug.Log("Hit");
-            _uIManager.Collect();
             IsItemAquired = true;
+            _uIManager.Collect();
             //if (_render.isVisible)
         }
     }
@@ -81,12 +89,12 @@ public class Collectible : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
         if (_itemImage.gameObject.name == _uIManager.CheckListeners())
         {
             _isItemEquipped = true;
-            transform.position = _equippedSlot.position;
+            _itemImage.rectTransform.anchoredPosition = _uIManager.EquippedItemSlot.rectTransform.anchoredPosition;
         }
         else
         {
             _isItemEquipped = false;
-            transform.position = _originalPos;
+            _itemImage.transform.position = _originalPos;
         }
     }
 

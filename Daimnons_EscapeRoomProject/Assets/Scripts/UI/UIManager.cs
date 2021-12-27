@@ -32,15 +32,16 @@ public class UIManager : MonoBehaviour
 
     [SerializeField]
     private GameObject _inventoryPanel;
-
-    [SerializeField]
-    private Image _equippedItemSlot;
     #endregion
 
     #region Fields
     private Image _equippedItem;
     private Vector3 _uIMousePos { get => _mainCam.WorldToScreenPoint(Input.mousePosition); }
     private bool _isInventoryOpen = false;
+    #endregion
+
+    #region Public Fields
+    public Image EquippedItemSlot;
     #endregion
 
     private void Awake()
@@ -106,8 +107,8 @@ public class UIManager : MonoBehaviour
                 }
             }
 
-            Debug.Log("Collect phase 5");
-            gameObject.SetActive(false);
+            //Debug.Log("Collect phase 5");
+            //gameObject.SetActive(false);
         }
     }
 

@@ -2239,7 +2239,6 @@ GameObject:
   - component: {fileID: 307956030}
   - component: {fileID: 307956029}
   - component: {fileID: 307956031}
-  - component: {fileID: 307956032}
   m_Layer: 5
   m_Name: FlashLight
   m_TagString: Untagged
@@ -2360,25 +2359,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &307956032
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 307956027}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5d329eb00d6037247941927c13e1a314, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _uIManager: {fileID: 726448221}
-  _equippedSlot: {fileID: 217636594}
-  _playerTr: {fileID: 982909037}
-  _mainCam: {fileID: 0}
-  _itemImage: {fileID: 307956029}
-  _render: {fileID: 813321616}
-  IsItemAquired: 0
 --- !u!1 &310838522
 GameObject:
   m_ObjectHideFlags: 0
@@ -4841,7 +4821,7 @@ MonoBehaviour:
   - {fileID: 307956029}
   _mainCam: {fileID: 963194227}
   _inventoryPanel: {fileID: 926138941}
-  _equippedItemSlot: {fileID: 217636595}
+  EquippedItemSlot: {fileID: 217636595}
 --- !u!4 &726448222
 Transform:
   m_ObjectHideFlags: 0
@@ -5321,11 +5301,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _uIManager: {fileID: 726448221}
-  _equippedSlot: {fileID: 217636594}
   _playerTr: {fileID: 982909037}
   _mainCam: {fileID: 963194228}
   _itemImage: {fileID: 307956029}
   _render: {fileID: 813321616}
+  _delayCounter: 0
+  _targetDelay: 2
   IsItemAquired: 0
 --- !u!65 &813321615
 BoxCollider:

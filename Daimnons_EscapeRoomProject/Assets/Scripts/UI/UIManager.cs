@@ -52,19 +52,25 @@ public class UIManager : MonoBehaviour
 
     private void Update()
     {
-        CheckListeners();
+        //CheckListeners();
     }
 
     #region Methods
-    private void SetInventoryState(bool onOff)
+    public void SetInventoryState()
     {
-        if (onOff)
+        if (!_isInventoryOpen)
+        {
             _inventoryPanel.SetActive(true);
-
+            _isInventoryOpen = true;
+        }
         else
+        {
             _inventoryPanel.SetActive(false);
+            _isInventoryOpen = false;
+        }
     }
 
+    /* GetAllListeners
     public string CheckListeners()
     {
         string itemName;
@@ -76,9 +82,16 @@ public class UIManager : MonoBehaviour
             btn.onClick.AddListener(delegate { Callback(btn); });
 
             if (btn.IsInvoking())
+            {
+                Debug.Log("Callback Done");
                 return itemName = Callback(btn);
+
+            }
             else
+            {
+                Debug.Log("Callback Error");
                 return "btn.Invoking() Not Working Properly";
+            }
         }
 
         return null;
@@ -89,28 +102,48 @@ public class UIManager : MonoBehaviour
         Debug.Log(btnPressed.gameObject.name + " pressed!");
         return btnPressed.gameObject.name;
     }
+    */
 
     public void Collect()
     {
-        Debug.Log("Collect phase 1");
-        foreach (GameObject item in Collectibles)
+        Debug.Log("Collect phase -1");
+        for (int i = 0; i < Collectibles.Count; i++)
         {
-            Debug.Log("Collect phase 2");
-            if (item.GetComponent<Collectible>().IsItemAquired)
+            Debug.Log("Collect phase -2");
+
+            if (!Collectibles[i].GetComponent<Collectible>().IsItemAquired)
+                return;
+
+            else
             {
-                Debug.Log("Collect phase 3");
+                Debug.Log("Collect phase -3");
                 foreach (Image itemImage in AquiredItemImages)
                 {
-                    Debug.Log("Collect phase 4");
+                    Debug.Log("Collect phase -4");
                     itemImage.gameObject.SetActive(true);
                     Debug.Log($"{itemImage.name} is aquired");
                 }
             }
-
-            //Debug.Log("Collect phase 5");
-            //gameObject.SetActive(false);
         }
-    }
 
+        //Debug.Log("Collect phase 1");
+        //foreach (GameObject item in Collectibles)
+        //{
+        //    Debug.Log("Collect phase 2");
+        //    if (item.GetComponent<Collectible>().IsItemAquired)
+        //    {
+        //        Debug.Log("Collect phase 3");
+        //        foreach (Image itemImage in AquiredItemImages)
+        //        {
+        //            Debug.Log("Collect phase 4");
+        //            itemImage.gameObject.SetActive(true);
+        //            Debug.Log($"{itemImage.name} is aquired");
+        //        }
+        //    }
+        //
+        //    //Debug.Log("Collect phase 5");
+        //    //gameObject.SetActive(false);
+        //}
+    }
     #endregion
 }

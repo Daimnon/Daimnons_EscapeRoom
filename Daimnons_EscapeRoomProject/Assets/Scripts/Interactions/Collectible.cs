@@ -18,40 +18,55 @@ public class Collectible : MonoBehaviour //IPointerEnterHandler, IPointerExitHan
 
     [SerializeField]
     private Renderer _render;
+
+    [SerializeField]
+    private bool _isItemAquired = false, _isItemInRange = false;
     #endregion
 
     #region Fields
     private Vector3 _originalPos;
+    private Ray _rayDirection;
+    private RaycastHit hit;
 
-    [SerializeField]
     private int _delayCounter = 0, _targetDelay = 2;
     private const float _maxRayDistance = 20f;
     private bool _isMouseOver = false, _isItemEquipped = false;
     #endregion
 
-    public bool IsItemAquired = false;
+    #region Properties
+    public bool IsItemAquired { get => _isItemAquired; }
+
+    public bool IsItemInRange { get => _isItemInRange; }
+    #endregion
+
+    public int _itemId;
+
+    private void Update()
+    {
+        //if (Physics.Raycast(gameObject.transform.position, Camera.main.transform.position, out hit))
+        //    _isItemInRange = true;
+        //else
+        //    _isItemInRange = false;
+
+    }
 
     private void Awake()
     {
         _originalPos = _itemImage.transform.position;
     }
 
-    void Update()
+    private void OnMouseDown()
     {
-        RaycastHit hit;
-        
-        if (Input.GetMouseButtonDown(1) && Physics.Raycast(_mainCam.position, _mainCam.forward, out hit, _maxRayDistance) && transform.name == hit.transform.name)
-        {
-            _delayCounter++;
+        Debug.Log("Hit");
+        _uIManager.Collect();
+        _isItemAquired = true;
 
-            //if (_delayCounter != _targetDelay)
-            //    return;
-
-            Debug.Log("Hit");
-            IsItemAquired = true;
-            _uIManager.Collect();
-            //if (_render.isVisible)
-        }
+        //if (IsItemInRange)
+        //{
+        //    Debug.Log("Hit");
+        //    _uIManager.Collect();
+        //    _isItemAquired = true;
+        //}
     }
 
     //if player in sight: aquire item
@@ -93,34 +108,17 @@ public class Collectible : MonoBehaviour //IPointerEnterHandler, IPointerExitHan
 
         if (!_isItemEquipped)
         {
-            Debug.Log("dudui");
+            Debug.Log("equip");
             _isItemEquipped = true;
             _itemImage.transform.parent = _uIManager.EquippedItemSlot.transform;
             _itemImage.transform.position = _uIManager.EquippedItemSlot.transform.position;
         }
         else
         {
-            Debug.Log("duduz");
+            Debug.Log("unequip");
             _isItemEquipped = false;
             _itemImage.transform.parent = null;
             _itemImage.transform.position = _originalPos;
         }
     }
-
-    /* Check if GO is looking at player
-     * void FixedUpdate()
-    {
-        RaycastHit hit;
-
-        if (Physics.Raycast(transform.position, transform.forward, out hit, maxDistance) && hit.collider.gameObject.CompareTag("Player"))
-        {
-
-        }
-    }*/
-
-    /* On Pointer Events
-    public void OnPointerUp(PointerEventData eventData)
-    {
-        throw new System.NotImplementedException();
-    }*/
 }

@@ -70,40 +70,6 @@ public class UIManager : MonoBehaviour
         }
     }
 
-    /* GetAllListeners
-    public string CheckListeners()
-    {
-        string itemName;
-
-        for (int i = 0; i < AquiredItemImages.Count; i++)
-        {
-            Button btn = AquiredItemImages[i].GetComponent<Button>();
-            
-            btn.onClick.AddListener(delegate { Callback(btn); });
-
-            if (btn.IsInvoking())
-            {
-                Debug.Log("Callback Done");
-                return itemName = Callback(btn);
-
-            }
-            else
-            {
-                Debug.Log("Callback Error");
-                return "btn.Invoking() Not Working Properly";
-            }
-        }
-
-        return null;
-    }
-
-    private string Callback(Button btnPressed)
-    {
-        Debug.Log(btnPressed.gameObject.name + " pressed!");
-        return btnPressed.gameObject.name;
-    }
-    */
-
     public void Collect()
     {
         Debug.Log("Collect phase -1");
@@ -111,7 +77,7 @@ public class UIManager : MonoBehaviour
         {
             Debug.Log("Collect phase -2");
 
-            if (!Collectibles[i].GetComponent<Collectible>().IsItemAquired)
+            if (Collectibles[i].GetComponent<Collectible>().IsItemAquired)
                 return;
 
             else

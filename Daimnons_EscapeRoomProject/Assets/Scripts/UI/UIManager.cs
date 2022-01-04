@@ -20,34 +20,21 @@ public class UIManager : MonoBehaviour
     }
     #endregion
 
-    public List<GameObject> AllCollectibles;
-
-    public List<Image> AllImages;
-    
     #region Serialized Fields
-    //[SerializeField]
-    public List<GameObject> Collectibles;
-
-    //[SerializeField]
-    public List<Image> AquiredItemImages;
-
-    public List<Image> ItemImages;
-
     [SerializeField]
-    private Camera _mainCam;
-
-    [SerializeField]
-    private GameObject _inventoryPanel;
+    private GameObject _inventoryPanel, _equippedItemSlotGO;
     #endregion
 
     #region Fields
-    private Image _equippedItem;
-    private Vector3 _uIMousePos { get => _mainCam.WorldToScreenPoint(Input.mousePosition); }
     private bool _isInventoryOpen = false;
     #endregion
 
     #region Public Fields
-    public Image EquippedItemSlot;
+    public List<GameObject> AllCollectibles;
+
+    public List<Image> AllImages;
+    
+    public Image EquippedItemSlotImage;
     #endregion
 
     private void Awake()
@@ -58,75 +45,21 @@ public class UIManager : MonoBehaviour
             image.enabled = false;
     }
 
-    private void Update()
-    {
-        //CheckListeners();
-    }
-
     #region Methods
     public void SetInventoryState()
     {
         if (!_isInventoryOpen)
         {
-            _inventoryPanel.SetActive(true);
             _isInventoryOpen = true;
+            _inventoryPanel.SetActive(true);
+            _equippedItemSlotGO.SetActive(true);
         }
         else
         {
-            _inventoryPanel.SetActive(false);
             _isInventoryOpen = false;
+            _inventoryPanel.SetActive(false);
+            _equippedItemSlotGO.SetActive(false);
         }
     }
-
-    public void Collect()
-    {
-        
-    }
-
-    /*public void Collect()
-    {
-        Debug.Log("Collect phase -1");
-        for (int i = 0; i < Collectibles.Count; i++)
-        {
-            Debug.Log("Collect phase -2");
-
-            if (Collectibles[i].GetComponent<Collectible>().IsItemAquired)
-                return;
-
-            else
-            {
-                Debug.Log("Collect phase -3");
-                AquiredItemImages.Add(ItemImages[i]);
-
-                Debug.Log("Collect phase -4");
-                foreach (Image itemImage in AquiredItemImages)
-                {
-                    Debug.Log("Collect phase -5");
-                    itemImage.gameObject.SetActive(true);
-                    Debug.Log($"{itemImage.name} is aquired");
-                }
-
-                break;
-            }
-        }*/
-
-        //Debug.Log("Collect phase 1");
-        //foreach (GameObject item in Collectibles)
-        //{
-        //    Debug.Log("Collect phase 2");
-        //    if (!item.GetComponent<Collectible>().IsItemAquired)
-        //    {
-        //        Debug.Log("Collect phase 3");
-        //        foreach (Image itemImage in AquiredItemImages)
-        //        {
-        //            Debug.Log("Collect phase 4");
-        //            itemImage.gameObject.SetActive(true);
-        //            Debug.Log($"{itemImage.name} is aquired");
-        //        }
-        //    }
-        //
-        //    //Debug.Log("Collect phase 5");
-        //    //gameObject.SetActive(false);
-        //}
     #endregion
 }

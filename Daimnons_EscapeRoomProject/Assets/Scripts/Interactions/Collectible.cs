@@ -61,8 +61,8 @@ public class Collectible : MonoBehaviour
         {
             Debug.Log("equip");
             _isItemEquipped = true;
-            _equippedSlotImage.transform.parent = UIManager.Instance.EquippedItemSlot.transform;
-            _equippedSlotImage.transform.position = UIManager.Instance.EquippedItemSlot.transform.position;
+            _equippedSlotImage.transform.parent = UIManager.Instance.EquippedItemSlotImage.transform;
+            _equippedSlotImage.transform.position = UIManager.Instance.EquippedItemSlotImage.transform.position;
         }
         else
         {

@@ -27,6 +27,8 @@ public class UIManager : MonoBehaviour
     //[SerializeField]
     public List<Image> AquiredItemImages;
 
+    public List<Image> ItemImages;
+
     [SerializeField]
     private Camera _mainCam;
 
@@ -83,12 +85,17 @@ public class UIManager : MonoBehaviour
             else
             {
                 Debug.Log("Collect phase -3");
+                AquiredItemImages.Add(ItemImages[i]);
+
+                Debug.Log("Collect phase -4");
                 foreach (Image itemImage in AquiredItemImages)
                 {
-                    Debug.Log("Collect phase -4");
+                    Debug.Log("Collect phase -5");
                     itemImage.gameObject.SetActive(true);
                     Debug.Log($"{itemImage.name} is aquired");
                 }
+
+                break;
             }
         }
 

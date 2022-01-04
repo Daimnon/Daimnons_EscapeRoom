@@ -34,7 +34,7 @@ public class Collectible : MonoBehaviour //IPointerEnterHandler, IPointerExitHan
     #endregion
 
     #region Properties
-    public bool IsItemAquired { get => _isItemAquired; }
+    public bool IsItemAquired { get => _isItemAquired;}
 
     public bool IsItemInRange { get => _isItemInRange; }
     #endregion
@@ -57,38 +57,11 @@ public class Collectible : MonoBehaviour //IPointerEnterHandler, IPointerExitHan
 
     private void OnMouseDown()
     {
-        Debug.Log("Hit");
-        _uIManager.Collect();
+        Debug.Log($"Hit on {gameObject.name}");
         _isItemAquired = true;
+        _uIManager.Collect();
 
-        //if (IsItemInRange)
-        //{
-        //    Debug.Log("Hit");
-        //    _uIManager.Collect();
-        //    _isItemAquired = true;
-        //}
     }
-
-    //if player in sight: aquire item
-    //public void OnPointerDown(PointerEventData eventData)
-    //{
-    //    //if (_render.isVisible)
-    //    //    _isItemAquired = true;
-    //}
-    //
-    ////if player in sight: check if mouse is over the item
-    //public void OnPointerEnter(PointerEventData eventData)
-    //{
-    //    if (_render.isVisible)
-    //        _isMouseOver = true;
-    //}
-    //
-    ////if player in sight: check if mouse is not over the item
-    //public void OnPointerExit(PointerEventData eventData)
-    //{
-    //    if (_render.isVisible)
-    //        _isMouseOver = false;
-    //}
 
     private void ShowItem()
     {
@@ -101,10 +74,6 @@ public class Collectible : MonoBehaviour //IPointerEnterHandler, IPointerExitHan
     //event
     public void Equip()
     {
-        //if (_itemImage.gameObject.name == _uIManager.CheckListeners())
-        //{
-        //   
-        //}
 
         if (!_isItemEquipped)
         {

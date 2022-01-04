@@ -39,3 +39,5 @@ sysinfo.txt
 Daimnons_EscapeRoomProject/UserSettings/EditorUserSettings.asset
 *.log
 *.log
+Daimnons_EscapeRoomProject/Logs/AssetImportWorker0.log
+*.log

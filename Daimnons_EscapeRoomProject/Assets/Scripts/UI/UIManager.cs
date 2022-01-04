@@ -6,20 +6,24 @@ using UnityEngine;
 
 public class UIManager : MonoBehaviour
 {
-    //#region Singleton
-    //private static UIManager _instance;
-    //public static UIManager Instance
-    //{
-    //    get
-    //    {
-    //        if (_instance == null)
-    //            Debug.Log("No UIManager Found");
-    //
-    //        return _instance;
-    //    }
-    //}
-    //#endregion
+    #region Singleton
+    private static UIManager _instance;
+    public static UIManager Instance
+    {
+        get
+        {
+            if (_instance == null)
+                Debug.Log("No UIManager Found");
+    
+            return _instance;
+        }
+    }
+    #endregion
 
+    public List<GameObject> AllCollectibles;
+
+    public List<Image> AllImages;
+    
     #region Serialized Fields
     //[SerializeField]
     public List<GameObject> Collectibles;
@@ -48,8 +52,10 @@ public class UIManager : MonoBehaviour
 
     private void Awake()
     {
-        //singleton
-        /*_instance = this;*/
+        _instance = this;
+
+        foreach (Image image in AllImages)
+            image.enabled = false;
     }
 
     private void Update()
@@ -74,6 +80,11 @@ public class UIManager : MonoBehaviour
 
     public void Collect()
     {
+        
+    }
+
+    /*public void Collect()
+    {
         Debug.Log("Collect phase -1");
         for (int i = 0; i < Collectibles.Count; i++)
         {
@@ -97,13 +108,13 @@ public class UIManager : MonoBehaviour
 
                 break;
             }
-        }
+        }*/
 
         //Debug.Log("Collect phase 1");
         //foreach (GameObject item in Collectibles)
         //{
         //    Debug.Log("Collect phase 2");
-        //    if (item.GetComponent<Collectible>().IsItemAquired)
+        //    if (!item.GetComponent<Collectible>().IsItemAquired)
         //    {
         //        Debug.Log("Collect phase 3");
         //        foreach (Image itemImage in AquiredItemImages)
@@ -117,6 +128,5 @@ public class UIManager : MonoBehaviour
         //    //Debug.Log("Collect phase 5");
         //    //gameObject.SetActive(false);
         //}
-    }
     #endregion
 }

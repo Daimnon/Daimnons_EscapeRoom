@@ -1,93 +1,75 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEngine.EventSystems;
-using UnityEngine.UI;
 using UnityEngine;
+using UnityEngine.UI;
 
-public class Collectible : MonoBehaviour //IPointerEnterHandler, IPointerExitHandler, IPointerDownHandler //, IPointerUpHandler
+public class Collectible : MonoBehaviour
 {
-    #region SerializedFields
     [SerializeField]
-    private UIManager _uIManager;
-
-    [SerializeField]
-    private Transform _playerTr, _mainCam;
+    private Image _inventoryPanel;
 
     [SerializeField]
-    private Image _itemImage; //_equippedSlot
+    private Image _equippedSlotImage;
 
     [SerializeField]
-    private Renderer _render;
+    private int _itemId;
 
     [SerializeField]
-    private bool _isItemAquired = false, _isItemInRange = false;
-    #endregion
+    private bool _isItemAcquired = false ,_isItemEquipped = false;
 
-    #region Fields
-    private Vector3 _originalPos;
-    private Ray _rayDirection;
-    private RaycastHit hit;
-
-    private int _delayCounter = 0, _targetDelay = 2;
-    private const float _maxRayDistance = 20f;
-    private bool _isMouseOver = false, _isItemEquipped = false;
-    #endregion
-
-    #region Properties
-    public bool IsItemAquired { get => _isItemAquired;}
-
-    public bool IsItemInRange { get => _isItemInRange; }
-    #endregion
-
-    public int _itemId;
-
-    private void Update()
-    {
-        //if (Physics.Raycast(gameObject.transform.position, Camera.main.transform.position, out hit))
-        //    _isItemInRange = true;
-        //else
-        //    _isItemInRange = false;
-
-    }
+    private Vector3 _originalImagePos;
+    private int _currentCycleIndex = 0;
 
     private void Awake()
     {
-        _originalPos = _itemImage.transform.position;
+        _originalImagePos = _equippedSlotImage.transform.position;
     }
 
     private void OnMouseDown()
     {
-        Debug.Log($"Hit on {gameObject.name}");
-        _isItemAquired = true;
-        _uIManager.Collect();
-
+        Debug.Log($"Trying to collect {gameObject.name}");
+        _isItemAcquired = true;
+        Collect();
     }
 
-    private void ShowItem()
+    public void Collect()
     {
-        if (_uIManager.AquiredItemImages.Contains(_itemImage) && IsItemAquired)
-            _itemImage.enabled = true;
-        else
-            _itemImage.enabled = false;
+        _currentCycleIndex = _itemId;
+        _currentCycleIndex = Mathf.Clamp(_currentCycleIndex, 0, UIManager.Instance.AllCollectibles.Count - 1);
+
+        Debug.Log(_currentCycleIndex);
+
+        CollectGo();
+        ShowImage();
     }
 
-    //event
+    private void CollectGo()
+    {
+        if (_isItemAcquired)
+            UIManager.Instance.AllCollectibles[_currentCycleIndex].SetActive(true);
+    }
+
+    private void ShowImage()
+    {
+        if (_isItemAcquired)
+            UIManager.Instance.AllImages[_currentCycleIndex].enabled = true;
+    }
+
     public void Equip()
     {
-
         if (!_isItemEquipped)
         {
             Debug.Log("equip");
             _isItemEquipped = true;
-            _itemImage.transform.parent = _uIManager.EquippedItemSlot.transform;
-            _itemImage.transform.position = _uIManager.EquippedItemSlot.transform.position;
+            _equippedSlotImage.transform.parent = UIManager.Instance.EquippedItemSlot.transform;
+            _equippedSlotImage.transform.position = UIManager.Instance.EquippedItemSlot.transform.position;
         }
         else
         {
             Debug.Log("unequip");
             _isItemEquipped = false;
-            _itemImage.transform.parent = null;
-            _itemImage.transform.position = _originalPos;
+            _equippedSlotImage.transform.parent = _inventoryPanel.gameObject.transform;
+            _equippedSlotImage.transform.position = _originalImagePos;
         }
     }
 }

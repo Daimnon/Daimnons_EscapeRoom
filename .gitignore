@@ -37,4 +37,4 @@ sysinfo.txt
 *.unitypackage
 *.log
 Daimnons_EscapeRoomProject/UserSettings/EditorUserSettings.asset
-Daimnons_EscapeRoomProject/Logs/AssetImportWorker0.log
+*.log

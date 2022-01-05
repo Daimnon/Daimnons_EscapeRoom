@@ -535,7 +535,7 @@ HingeJoint:
   m_Anchor: {x: 0, y: 0.004263371, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -0.000067017216, y: 0.0042101247, z: -0.0000025003637}
+  m_ConnectedAnchor: {x: -0.00006707784, y: 0.004210124, z: -0.0000025000093}
   m_UseSpring: 0
   m_Spring:
     spring: 0
@@ -1530,7 +1530,7 @@ Transform:
   m_GameObject: {fileID: 6186505929027393319}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 11.299999, y: -5.305, z: -9.933998}
-  m_LocalScale: {x: 6, y: 6, z: 6}
+  m_LocalScale: {x: 2.4, y: 6, z: 6}
   m_Children:
   - {fileID: 6183638616838142053}
   - {fileID: 6183735770570224881}
@@ -2211,7 +2211,7 @@ HingeJoint:
   m_Anchor: {x: 0, y: 0.004213795, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -0.0035180666, y: 0.0042789793, z: 0.0007418984}
+  m_ConnectedAnchor: {x: -0.0035180366, y: 0.0042789793, z: 0.0007418984}
   m_UseSpring: 0
   m_Spring:
     spring: 0

@@ -1099,3 +1099,372 @@ Received Import Request.
 Start importing Assets/Plugins/VRCinemaforMobile/Prefabs using Guid(056ea5e500c2d7f42b829842f3b16ecc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'da7f3b682e4a6864050d8627b2d336f2') in 0.004623 seconds 
   Import took 0.012320 seconds .
 
+========================================================================
+Received Import Request.
+  Time since last request: 1061.864501 seconds.
+  path: Assets/Plugins/VR-ready PBR toilet/Materials/Atlas.mat
+  artifactKey: Guid(53ee7a7f58cb8e344b760bf90e7de4e5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Plugins/VR-ready PBR toilet/Materials/Atlas.mat using Guid(53ee7a7f58cb8e344b760bf90e7de4e5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6a6bcb426ba3a100132546d89c44b5e7') in 0.010779 seconds 
+  Import took 0.016741 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000130 seconds.
+  path: Assets/Plugins/VR-ready PBR toilet/Materials/Floor.mat
+  artifactKey: Guid(6aa8ae738c0ab374ca4d13722912dadd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Plugins/VR-ready PBR toilet/Materials/Floor.mat using Guid(6aa8ae738c0ab374ca4d13722912dadd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b01cb8bf9d935939709467c2e7ee6836') in 0.008182 seconds 
+  Import took 0.010623 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 13.701989 seconds.
+  path: Assets/Plugins/VR-ready PBR toilet/Prefabs/Toilet.prefab
+  artifactKey: Guid(53696d19303c1ed43bfc3149d3707063) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Plugins/VR-ready PBR toilet/Prefabs/Toilet.prefab using Guid(53696d19303c1ed43bfc3149d3707063) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8d4ade20b4d1db2494e3e58f13f5905b') in 0.010431 seconds 
+  Import took 0.013543 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 7.604335 seconds.
+  path: Assets/Sprites/BlueKey.png
+  artifactKey: Guid(26b099f917d2b684ea8178b99a4436d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/BlueKey.png using Guid(26b099f917d2b684ea8178b99a4436d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '863bc6fef6d53989e68e0b3f95f1dce9') in 0.028182 seconds 
+  Import took 0.030693 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000171 seconds.
+  path: Assets/Sprites/Panel.png
+  artifactKey: Guid(57712cb696718e5458a69bc7ecdb00e3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Panel.png using Guid(57712cb696718e5458a69bc7ecdb00e3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '77095c63d2bf5661b6ea0537af864b48') in 0.016129 seconds 
+  Import took 0.018512 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000223 seconds.
+  path: Assets/Sprites/PurpleKey.png
+  artifactKey: Guid(0bc6f7d6424cb114fa667cbea35685c8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/PurpleKey.png using Guid(0bc6f7d6424cb114fa667cbea35685c8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bc72a75cdb9fcb1482f97d955ffb0f7f') in 0.043094 seconds 
+  Import took 0.045549 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000236 seconds.
+  path: Assets/Sprites/GreenKey.png
+  artifactKey: Guid(e7c4970edc30c7b43b9e10ab5f368d2d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/GreenKey.png using Guid(e7c4970edc30c7b43b9e10ab5f368d2d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7869ab607a5c5f8f11f29705b9ae5ddf') in 0.027862 seconds 
+  Import took 0.030196 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000153 seconds.
+  path: Assets/Sprites/CyanKey.png
+  artifactKey: Guid(ac4be1faec350a64eb27f1bdca3f4208) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/CyanKey.png using Guid(ac4be1faec350a64eb27f1bdca3f4208) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8dfaebdee013464913c38dcca488fa82') in 0.024409 seconds 
+  Import took 0.040072 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000224 seconds.
+  path: Assets/Sprites/YellowKey.png
+  artifactKey: Guid(35728a38bdea2fc4292a08d744fb2510) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/YellowKey.png using Guid(35728a38bdea2fc4292a08d744fb2510) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '695323902bebda2f17bfab380daedb8b') in 0.025073 seconds 
+  Import took 0.039954 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000206 seconds.
+  path: Assets/Sprites/Flashlight.png
+  artifactKey: Guid(846830605f0235445870ffbc831f3dea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Flashlight.png using Guid(846830605f0235445870ffbc831f3dea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '771e3f5ed067a0393e4573a2b70b63da') in 0.037575 seconds 
+  Import took 0.039967 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000264 seconds.
+  path: Assets/Sprites/PinkKey.png
+  artifactKey: Guid(d7c81e7d29046e54eb8b2fdbd1dc2489) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/PinkKey.png using Guid(d7c81e7d29046e54eb8b2fdbd1dc2489) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '55b3869e22805205128c4594b280e7d4') in 0.017565 seconds 
+  Import took 0.019923 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000154 seconds.
+  path: Assets/Sprites/OrangeKey.png
+  artifactKey: Guid(d8d8ddd20cae0fc46a61664fb202e86d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/OrangeKey.png using Guid(d8d8ddd20cae0fc46a61664fb202e86d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8da13d5deec0bab26d3ea211aa7fca1b') in 0.014972 seconds 
+  Import took 0.028930 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000108 seconds.
+  path: Assets/Sprites/RedKey.png
+  artifactKey: Guid(be7c162279bf2cf408c60addb265c9cf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/RedKey.png using Guid(be7c162279bf2cf408c60addb265c9cf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '552343288203b23f441c5e59bacdf89b') in 0.017317 seconds 
+  Import took 0.019610 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.411639 seconds.
+  path: Assets/Prefabs/Toilet.prefab
+  artifactKey: Guid(d376215f2e1fd2b47aa287dda22ec4c9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Toilet.prefab using Guid(d376215f2e1fd2b47aa287dda22ec4c9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3e811e781af33d1aebd1ef4343020e3f') in 0.010032 seconds 
+  Import took 0.022409 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 5.508111 seconds.
+  path: Assets/Prefabs/Toilet.prefab
+  artifactKey: Guid(d376215f2e1fd2b47aa287dda22ec4c9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Toilet.prefab using Guid(d376215f2e1fd2b47aa287dda22ec4c9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9e81ab300fc190709d87ed2095412ea4') in 0.011699 seconds 
+  Import took 0.014378 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 59.388396 seconds.
+  path: Assets/Prefabs/Toilet.prefab
+  artifactKey: Guid(d376215f2e1fd2b47aa287dda22ec4c9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Toilet.prefab using Guid(d376215f2e1fd2b47aa287dda22ec4c9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7b2b8d5afa193d287be575deb1378fe7') in 0.013530 seconds 
+  Import took 0.016233 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 39.583408 seconds.
+  path: Assets/Prefabs/Toilet Room.prefab
+  artifactKey: Guid(0abd6b97bdbd1804988976d68597d635) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Toilet Room.prefab using Guid(0abd6b97bdbd1804988976d68597d635) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e25cfa42c75666c5a94aed545b1be6f2') in 0.036447 seconds 
+  Import took 0.041359 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 21.029728 seconds.
+  path: Assets/Plugins/VRCinemaforMobile/Prefabs/Chairs.prefab
+  artifactKey: Guid(2086ddffb0a0ff84da39b3927545a02f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Plugins/VRCinemaforMobile/Prefabs/Chairs.prefab using Guid(2086ddffb0a0ff84da39b3927545a02f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1e61148be90208e3ff6e0a32362e7fd1') in 0.018508 seconds 
+  Import took 0.022453 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000206 seconds.
+  path: Assets/Plugins/VRCinemaforMobile/Prefabs/TheaterFloor.prefab
+  artifactKey: Guid(1bba633eab812e74f86b2123eff50328) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Plugins/VRCinemaforMobile/Prefabs/TheaterFloor.prefab using Guid(1bba633eab812e74f86b2123eff50328) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '23e19a830afc40cb6556bd1de95135ee') in 0.009313 seconds 
+  Import took 0.020468 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000100 seconds.
+  path: Assets/Plugins/VRCinemaforMobile/Prefabs/TheaterLight.prefab
+  artifactKey: Guid(97827080dd0285042ab9e1138f7e914f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Plugins/VRCinemaforMobile/Prefabs/TheaterLight.prefab using Guid(97827080dd0285042ab9e1138f7e914f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'deceadb6209c8b712e119c99352fea9e') in 0.015783 seconds 
+  Import took 0.019206 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000151 seconds.
+  path: Assets/Plugins/VRCinemaforMobile/Prefabs/Row.prefab
+  artifactKey: Guid(c4f0eb94a04163e4584c284ce0c13a90) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Plugins/VRCinemaforMobile/Prefabs/Row.prefab using Guid(c4f0eb94a04163e4584c284ce0c13a90) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1f10fe6c8a479bd1f61fcf802fc19495') in 0.010472 seconds 
+  Import took 0.012896 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000120 seconds.
+  path: Assets/Plugins/VRCinemaforMobile/Prefabs/TheaterLampsRightSide.prefab
+  artifactKey: Guid(34e9f5359add2c44c9695491aa90eaac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Plugins/VRCinemaforMobile/Prefabs/TheaterLampsRightSide.prefab using Guid(34e9f5359add2c44c9695491aa90eaac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a57050b8334ac325686bf5b9fec7283c') in 0.008631 seconds 
+  Import took 0.010960 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000135 seconds.
+  path: Assets/Plugins/VRCinemaforMobile/Prefabs/Line.prefab
+  artifactKey: Guid(462162dbd8c5eda48a84a10a824a90c5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Plugins/VRCinemaforMobile/Prefabs/Line.prefab using Guid(462162dbd8c5eda48a84a10a824a90c5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b2f5e73c359b3c91324ca30012864374') in 0.010694 seconds 
+  Import took 0.021146 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000168 seconds.
+  path: Assets/Plugins/VRCinemaforMobile/Prefabs/Theater.prefab
+  artifactKey: Guid(2c6c0f574b4426a4c936cf15024dd3e6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Plugins/VRCinemaforMobile/Prefabs/Theater.prefab using Guid(2c6c0f574b4426a4c936cf15024dd3e6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3389781ab6099273479bd1908e2b7f94') in 0.032355 seconds 
+  Import took 0.038031 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000184 seconds.
+  path: Assets/Plugins/VRCinemaforMobile/Prefabs/TheaterScreen.prefab
+  artifactKey: Guid(6c7bf5b7afb7c504cba9599ed2753acd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Plugins/VRCinemaforMobile/Prefabs/TheaterScreen.prefab using Guid(6c7bf5b7afb7c504cba9599ed2753acd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ecdc0ef7d5a046bfd5c871565ce2d98f') in 0.008335 seconds 
+  Import took 0.010828 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000253 seconds.
+  path: Assets/Plugins/VRCinemaforMobile/Prefabs/TheaterLampsLeftSide.prefab
+  artifactKey: Guid(f04afd7bc9576584bad7989be7b019db) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Plugins/VRCinemaforMobile/Prefabs/TheaterLampsLeftSide.prefab using Guid(f04afd7bc9576584bad7989be7b019db) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c6370009a29dbd52967505dfd456032c') in 0.008377 seconds 
+  Import took 0.010785 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000221 seconds.
+  path: Assets/Plugins/VRCinemaforMobile/Prefabs/TheaterStairs.prefab
+  artifactKey: Guid(e1534ffca7e9f9147a79cc6f03d7e360) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Plugins/VRCinemaforMobile/Prefabs/TheaterStairs.prefab using Guid(e1534ffca7e9f9147a79cc6f03d7e360) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '87b0103d29301975fcca47d723dd7512') in 0.008123 seconds 
+  Import took 0.010614 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000225 seconds.
+  path: Assets/Plugins/VRCinemaforMobile/Prefabs/TheaterScreenBg.prefab
+  artifactKey: Guid(27931472f71d96340b792d4ccf6ff299) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Plugins/VRCinemaforMobile/Prefabs/TheaterScreenBg.prefab using Guid(27931472f71d96340b792d4ccf6ff299) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f2caa9372f5318914c5fa8811c158f63') in 0.009112 seconds 
+  Import took 0.011760 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000270 seconds.
+  path: Assets/Plugins/VRCinemaforMobile/Prefabs/TheaterCeiling & Lines.prefab
+  artifactKey: Guid(9d9aa61ac73a17f409bd4ba03f488db2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Plugins/VRCinemaforMobile/Prefabs/TheaterCeiling & Lines.prefab using Guid(9d9aa61ac73a17f409bd4ba03f488db2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5c6883e6bc65c941a4a81b793307c0f8') in 0.008589 seconds 
+  Import took 0.011132 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000171 seconds.
+  path: Assets/Plugins/VRCinemaforMobile/Prefabs/RightWallLights.prefab
+  artifactKey: Guid(0b1e98f318b0b284684e640714bcefb0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Plugins/VRCinemaforMobile/Prefabs/RightWallLights.prefab using Guid(0b1e98f318b0b284684e640714bcefb0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c1fd75008cc185b0f21de074315b4fc1') in 0.011941 seconds 
+  Import took 0.014867 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000156 seconds.
+  path: Assets/Plugins/VRCinemaforMobile/Prefabs/LeftWallLights.prefab
+  artifactKey: Guid(b8e59b733dc472347ae05194d7a279c3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Plugins/VRCinemaforMobile/Prefabs/LeftWallLights.prefab using Guid(b8e59b733dc472347ae05194d7a279c3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5a3ea5e204980312fdde6b7ddc9c6772') in 0.012374 seconds 
+  Import took 0.015402 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000170 seconds.
+  path: Assets/Plugins/VRCinemaforMobile/Prefabs/TheaterWalls.prefab
+  artifactKey: Guid(ae9db09b6dfd9364abe0d4d5442eda33) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Plugins/VRCinemaforMobile/Prefabs/TheaterWalls.prefab using Guid(ae9db09b6dfd9364abe0d4d5442eda33) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0bb3091ec544b9ad9010d941e65c4743') in 0.009298 seconds 
+  Import took 0.019860 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000237 seconds.
+  path: Assets/Plugins/VRCinemaforMobile/Prefabs/TheaterLamps.prefab
+  artifactKey: Guid(653cf52874edf0f48a280b906f458c94) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Plugins/VRCinemaforMobile/Prefabs/TheaterLamps.prefab using Guid(653cf52874edf0f48a280b906f458c94) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b4ac9aae9f97af9e542880aa0ba4f072') in 0.009204 seconds 
+  Import took 0.011776 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000105 seconds.
+  path: Assets/Plugins/VRCinemaforMobile/Prefabs/TheaterChair.prefab
+  artifactKey: Guid(c997bf972b9ebe54bb5db9b469c04901) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Plugins/VRCinemaforMobile/Prefabs/TheaterChair.prefab using Guid(c997bf972b9ebe54bb5db9b469c04901) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c7d6c66069ed5fa98fe66994c55efd04') in 0.009013 seconds 
+  Import took 0.011665 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000150 seconds.
+  path: Assets/Plugins/VRCinemaforMobile/Prefabs/TheaterCeilingLine.prefab
+  artifactKey: Guid(93ed566e02d85d34aa291e30ee4271e0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Plugins/VRCinemaforMobile/Prefabs/TheaterCeilingLine.prefab using Guid(93ed566e02d85d34aa291e30ee4271e0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '103decf2e9736fd146298b6b4f9aa2f5') in 0.008678 seconds 
+  Import took 0.010994 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000186 seconds.
+  path: Assets/Plugins/VRCinemaforMobile/Prefabs/ScreenBackLight.prefab
+  artifactKey: Guid(82e13b49a4192934789714c426a18e04) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Plugins/VRCinemaforMobile/Prefabs/ScreenBackLight.prefab using Guid(82e13b49a4192934789714c426a18e04) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00dd47a09752e7afa8f0c2f9290a4030') in 0.007905 seconds 
+  Import took 0.010628 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000144 seconds.
+  path: Assets/Plugins/VRCinemaforMobile/Prefabs/TheaterLamp.prefab
+  artifactKey: Guid(30031cbe2b8e53f45b9f3b5def5a3f20) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Plugins/VRCinemaforMobile/Prefabs/TheaterLamp.prefab using Guid(30031cbe2b8e53f45b9f3b5def5a3f20) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '835edf69f31951d6d89449320bec8df5') in 0.008166 seconds 
+  Import took 0.010624 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000200 seconds.
+  path: Assets/Plugins/VRCinemaforMobile/Prefabs/TheaterCeiling.prefab
+  artifactKey: Guid(b051fd6086d384247b1e2e648be1d1ac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Plugins/VRCinemaforMobile/Prefabs/TheaterCeiling.prefab using Guid(b051fd6086d384247b1e2e648be1d1ac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8f3b170ca97a33e0d0f25b97f2f33230') in 0.008903 seconds 
+  Import took 0.011975 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000164 seconds.
+  path: Assets/Plugins/VRCinemaforMobile/Prefabs/ExitDoor.prefab
+  artifactKey: Guid(0f3228362f2680c438a17f348abf3dc5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Plugins/VRCinemaforMobile/Prefabs/ExitDoor.prefab using Guid(0f3228362f2680c438a17f348abf3dc5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1d0d6d1ac1a9a6926620b954d44ce13a') in 0.010399 seconds 
+  Import took 0.012913 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000163 seconds.
+  path: Assets/Plugins/VRCinemaforMobile/Prefabs/TheaterStairsGuide.prefab
+  artifactKey: Guid(f1bca2951c43eba488f738ec9b404d3d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Plugins/VRCinemaforMobile/Prefabs/TheaterStairsGuide.prefab using Guid(f1bca2951c43eba488f738ec9b404d3d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '58344b115b4889c2fa409dfd21b40170') in 0.010356 seconds 
+  Import took 0.012802 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000116 seconds.
+  path: Assets/Plugins/VRCinemaforMobile/Prefabs/Theater Door.prefab
+  artifactKey: Guid(63a6f51f6236b9a43a6cc894f7594324) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Plugins/VRCinemaforMobile/Prefabs/Theater Door.prefab using Guid(63a6f51f6236b9a43a6cc894f7594324) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0183661ccd70ece8384f5d3e7789cc5b') in 0.008778 seconds 
+  Import took 0.011153 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000128 seconds.
+  path: Assets/Plugins/VRCinemaforMobile/Prefabs/TheaterStairs & Guide.prefab
+  artifactKey: Guid(bdbbbf2943a4c3a44a72d535c9596f65) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Plugins/VRCinemaforMobile/Prefabs/TheaterStairs & Guide.prefab using Guid(bdbbbf2943a4c3a44a72d535c9596f65) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '01711038c2bb938222e40b7d8ff695b0') in 0.008821 seconds 
+  Import took 0.011315 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 88.611808 seconds.
+  path: Assets/Prefabs/Theater2.prefab
+  artifactKey: Guid(c37908d21e9804243a3ef7c7e761478a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Theater2.prefab using Guid(c37908d21e9804243a3ef7c7e761478a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '288a62e430c8725c2c1d91865406e473') in 0.034218 seconds 
+  Import took 0.040089 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 4.048731 seconds.
+  path: Assets/Prefabs/Theater.prefab
+  artifactKey: Guid(c37908d21e9804243a3ef7c7e761478a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Theater.prefab using Guid(c37908d21e9804243a3ef7c7e761478a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ad6cf8787b27b748a23284ab7bbdd808') in 0.033912 seconds 
+  Import took 0.039945 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 71.652400 seconds.
+  path: Assets/Prefabs/Theater.prefab
+  artifactKey: Guid(c37908d21e9804243a3ef7c7e761478a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Theater.prefab using Guid(c37908d21e9804243a3ef7c7e761478a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2e59facb5595ebaede18ffafd9454528') in 0.042582 seconds 
+  Import took 0.048725 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000127 seconds.
+  path: Assets/Prefabs/Toilet Room.prefab
+  artifactKey: Guid(0abd6b97bdbd1804988976d68597d635) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Toilet Room.prefab using Guid(0abd6b97bdbd1804988976d68597d635) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '870f0d769b30b3004bc31874a1caeec7') in 0.025783 seconds 
+  Import took 0.030581 seconds .
+
+AssetImportWorkerClient::OnTransportError - code=2 error=End of file

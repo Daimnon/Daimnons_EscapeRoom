@@ -46,19 +46,19 @@ public class LobbyState : BaseState
             CurrentStateMachine.ChangeState(((SceneState)CurrentStateMachine).LobbyStateInstance);
         //photo & toilet intersection state quickhack
         if (Input.GetKey(KeyCode.Alpha2))
-            CurrentStateMachine.ChangeState(((SceneState)CurrentStateMachine).PhotoToiletIntersectionInstance);
+            CurrentStateMachine.ChangeState(((SceneState)CurrentStateMachine).ToiletServerIntersectionInstance);
         //photography room state quickhack
         if (Input.GetKey(KeyCode.Alpha3))
-            CurrentStateMachine.ChangeState(((SceneState)CurrentStateMachine).PhotographyRoomStateInstance);
+            CurrentStateMachine.ChangeState(((SceneState)CurrentStateMachine).ToiletsRoomInstance);
         //toilets room state quickhack
         if (Input.GetKey(KeyCode.Alpha4))
-            CurrentStateMachine.ChangeState(((SceneState)CurrentStateMachine).ToiletsRoomStateInstance);
+            CurrentStateMachine.ChangeState(((SceneState)CurrentStateMachine).ServersRoomStateInstance);
     }
 
     public void GoLeft()
     {
         Debug.Log("Executed Lobby Go Left");
-        CurrentStateMachine.ChangeState(((SceneState)CurrentStateMachine).PhotoToiletIntersectionInstance);
+        CurrentStateMachine.ChangeState(((SceneState)CurrentStateMachine).ToiletServerIntersectionInstance);
     }
 
     public void GoRight()

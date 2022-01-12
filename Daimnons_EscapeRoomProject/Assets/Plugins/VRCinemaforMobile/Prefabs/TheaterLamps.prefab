@@ -1,0 +1,158 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &6617236899085762406
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4083441102017154091}
+  m_Layer: 0
+  m_Name: TheaterLamps
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4083441102017154091
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6617236899085762406}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 9024489997387488400}
+  - {fileID: 1454472945014278597}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &3406365252841198194
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 4083441102017154091}
+    m_Modifications:
+    - target: {fileID: 617345170029504809, guid: f04afd7bc9576584bad7989be7b019db, type: 3}
+      propertyPath: m_Name
+      value: TheaterLampsLeftSide
+      objectReference: {fileID: 0}
+    - target: {fileID: 5942705252222209762, guid: f04afd7bc9576584bad7989be7b019db, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5942705252222209762, guid: f04afd7bc9576584bad7989be7b019db, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5942705252222209762, guid: f04afd7bc9576584bad7989be7b019db, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5942705252222209762, guid: f04afd7bc9576584bad7989be7b019db, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5942705252222209762, guid: f04afd7bc9576584bad7989be7b019db, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5942705252222209762, guid: f04afd7bc9576584bad7989be7b019db, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5942705252222209762, guid: f04afd7bc9576584bad7989be7b019db, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5942705252222209762, guid: f04afd7bc9576584bad7989be7b019db, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5942705252222209762, guid: f04afd7bc9576584bad7989be7b019db, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5942705252222209762, guid: f04afd7bc9576584bad7989be7b019db, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5942705252222209762, guid: f04afd7bc9576584bad7989be7b019db, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: f04afd7bc9576584bad7989be7b019db, type: 3}
+--- !u!4 &9024489997387488400 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5942705252222209762, guid: f04afd7bc9576584bad7989be7b019db, type: 3}
+  m_PrefabInstance: {fileID: 3406365252841198194}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &9072734372526714434
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 4083441102017154091}
+    m_Modifications:
+    - target: {fileID: 7622202423470221191, guid: 34e9f5359add2c44c9695491aa90eaac, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7622202423470221191, guid: 34e9f5359add2c44c9695491aa90eaac, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7622202423470221191, guid: 34e9f5359add2c44c9695491aa90eaac, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7622202423470221191, guid: 34e9f5359add2c44c9695491aa90eaac, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7622202423470221191, guid: 34e9f5359add2c44c9695491aa90eaac, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7622202423470221191, guid: 34e9f5359add2c44c9695491aa90eaac, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7622202423470221191, guid: 34e9f5359add2c44c9695491aa90eaac, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7622202423470221191, guid: 34e9f5359add2c44c9695491aa90eaac, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7622202423470221191, guid: 34e9f5359add2c44c9695491aa90eaac, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7622202423470221191, guid: 34e9f5359add2c44c9695491aa90eaac, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7622202423470221191, guid: 34e9f5359add2c44c9695491aa90eaac, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8767096629797340000, guid: 34e9f5359add2c44c9695491aa90eaac, type: 3}
+      propertyPath: m_Name
+      value: TheaterLampsRightSide
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 34e9f5359add2c44c9695491aa90eaac, type: 3}
+--- !u!4 &1454472945014278597 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7622202423470221191, guid: 34e9f5359add2c44c9695491aa90eaac, type: 3}
+  m_PrefabInstance: {fileID: 9072734372526714434}
+  m_PrefabAsset: {fileID: 0}

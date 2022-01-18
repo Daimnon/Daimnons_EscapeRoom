@@ -6,9 +6,9 @@ using UnityEngine;
 public class SceneState : StateMachine
 {
     public LobbyState LobbyStateInstance;
-    public PhotoToiletIntersection PhotoToiletIntersectionInstance;
-    public PhotographyRoomState PhotographyRoomStateInstance;
-    public ToiletsRoomState ToiletsRoomStateInstance;
+    public ServerToiletIntersectionState ToiletServerIntersectionInstance;
+    public ToiletsRoomState ToiletsRoomInstance;
+    public ServersRoomState ServersRoomStateInstance;
 
     public List<GameObject> InteractableGO;
     public List<Interactable> InteractableGOScripts;
@@ -21,9 +21,9 @@ public class SceneState : StateMachine
     private void Awake()
     {
         LobbyStateInstance = new LobbyState(this);
-        PhotoToiletIntersectionInstance = new PhotoToiletIntersection(this);
-        PhotographyRoomStateInstance = new PhotographyRoomState(this);
-        ToiletsRoomStateInstance = new ToiletsRoomState(this);
+        ToiletServerIntersectionInstance = new ServerToiletIntersectionState(this);
+        ToiletsRoomInstance = new ToiletsRoomState(this);
+        ServersRoomStateInstance = new ServersRoomState(this);
     }
 
     protected override BaseState GetInitialState()
@@ -60,16 +60,16 @@ public class SceneState : StateMachine
                 LobbyStateInstance.GoLeft();
                 break;
 
-            case "PhotoToiletIntersection":
-                PhotoToiletIntersectionInstance.GoLeft();
-                break;
-
-            case "PhotographyRoomState":
-                PhotographyRoomStateInstance.GoLeft();
+            case "ServerToiletIntersectionState":
+                ToiletServerIntersectionInstance.GoLeft();
                 break;
 
             case "ToiletsRoomState":
-                ToiletsRoomStateInstance.GoLeft();
+                ToiletsRoomInstance.GoLeft();
+                break;
+
+            case "ServersRoomState":
+                ServersRoomStateInstance.GoLeft();
                 break;
             default:
                 break;
@@ -87,16 +87,16 @@ public class SceneState : StateMachine
                 LobbyStateInstance.GoRight();
                 break;
 
-            case "PhotoToiletIntersection":
-                PhotoToiletIntersectionInstance.GoRight();
-                break;
-
-            case "PhotographyRoomState":
-                PhotographyRoomStateInstance.GoRight();
+            case "ServerToiletIntersectionState":
+                ToiletServerIntersectionInstance.GoRight();
                 break;
 
             case "ToiletsRoomState":
-                ToiletsRoomStateInstance.GoRight();
+                ToiletsRoomInstance.GoRight();
+                break;
+
+            case "ServersRoomState":
+                ServersRoomStateInstance.GoRight();
                 break;
             default:
                 break;

@@ -20,7 +20,7 @@ public class ToiletsRoomState : BaseState
     private float _horizontalInput;
     private float _verticalInput;
 
-    //constructor that impliments "StateD" and sM parameters to base constructor
+    //constructor that impliments "StateC" and sM parameters to base constructor
     public ToiletsRoomState(SceneState sM) : base("ToiletsRoomState", sM) { }
 
     //when starting state
@@ -28,7 +28,7 @@ public class ToiletsRoomState : BaseState
     {
         base.Enter();
 
-        (CurrentStateMachine as SceneState).PlayerTr.position = new Vector3(-30.5f, 3.5f, 12.5f);
+        (CurrentStateMachine as SceneState).PlayerTr.position = new Vector3(-30.5f, 3.5f, -22.5f);
         (CurrentStateMachine as SceneState).PlayerTr.rotation = Quaternion.Euler(0f, -90f, 0f);
         (CurrentStateMachine as SceneState).PlayerTr.localScale = new Vector3(1.5f, 2, 1.5f);
 
@@ -53,24 +53,24 @@ public class ToiletsRoomState : BaseState
             CurrentStateMachine.ChangeState(((SceneState)CurrentStateMachine).LobbyStateInstance);
         //photo & toilet intersection state quickhack
         if (Input.GetKey(KeyCode.Alpha2))
-            CurrentStateMachine.ChangeState(((SceneState)CurrentStateMachine).PhotoToiletIntersectionInstance);
+            CurrentStateMachine.ChangeState(((SceneState)CurrentStateMachine).ToiletServerIntersectionInstance);
         //photography room state quickhack
         if (Input.GetKey(KeyCode.Alpha3))
-            CurrentStateMachine.ChangeState(((SceneState)CurrentStateMachine).PhotographyRoomStateInstance);
+            CurrentStateMachine.ChangeState(((SceneState)CurrentStateMachine).ToiletsRoomInstance);
         //toilets room state quickhack
         if (Input.GetKey(KeyCode.Alpha4))
-            CurrentStateMachine.ChangeState(((SceneState)CurrentStateMachine).ToiletsRoomStateInstance);
+            CurrentStateMachine.ChangeState(((SceneState)CurrentStateMachine).ServersRoomStateInstance);
     }
 
     public void GoLeft()
     {
-        Debug.Log("Executed Toilets Room Go Left");
-        CurrentStateMachine.ChangeState(((SceneState)CurrentStateMachine).PhotoToiletIntersectionInstance);
+        Debug.Log("Executed Photography Room Go Left");
+        CurrentStateMachine.ChangeState(((SceneState)CurrentStateMachine).ToiletServerIntersectionInstance);
     }
 
     public void GoRight()
     {
-        Debug.Log("Executed Toilets Room Go Right");
-        CurrentStateMachine.ChangeState(((SceneState)CurrentStateMachine).PhotoToiletIntersectionInstance);
+        Debug.Log("Executed Photography Room Go Right");
+        CurrentStateMachine.ChangeState(((SceneState)CurrentStateMachine).ToiletServerIntersectionInstance);
     }
 }

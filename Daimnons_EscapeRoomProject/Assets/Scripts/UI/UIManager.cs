@@ -50,7 +50,7 @@ public class UIManager : MonoBehaviour
         _instance = this;
 
         foreach (Image image in AllImages)
-            //image.enabled = false;
+            image.enabled = false; // turn off to test, current working subject is blue key, current test subject is red key
 
         for (int i = 0; i < AllImages.Count; i++)
             _originalImagesPosition[i] = AllImages[i].transform.position;

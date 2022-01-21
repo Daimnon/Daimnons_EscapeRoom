@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ToiletsRoomState : BaseState
 {
-    //get references
+    //get references (Dependency Injection)
     #region Serialized Fields
     [SerializeField]
     private Camera _mainCam;

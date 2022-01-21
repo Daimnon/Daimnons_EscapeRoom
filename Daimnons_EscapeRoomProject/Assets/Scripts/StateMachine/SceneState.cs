@@ -5,6 +5,9 @@ using UnityEngine;
 
 public class SceneState : StateMachine
 {
+    //[SerializeField]
+    //private Transform _player;
+
     public LobbyState LobbyStateInstance;
     public ServerToiletIntersectionState ToiletServerIntersectionInstance;
     public ToiletsRoomState ToiletsRoomInstance;
@@ -30,8 +33,6 @@ public class SceneState : StateMachine
     {
         return LobbyStateInstance;
     }
-
-    //protected override BaseState C
 
     public void Interact<T>()
     {

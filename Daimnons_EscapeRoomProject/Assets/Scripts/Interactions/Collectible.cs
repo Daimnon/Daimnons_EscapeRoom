@@ -5,17 +5,20 @@ using UnityEngine.UI;
 
 public class Collectible : MonoBehaviour
 {
-    [SerializeField]
-    private Image _inventoryPanel;
+    //[SerializeField]
+    //private Renderer _itemRend;
+    //
+    //[SerializeField]
+    //private Collider _itemCol;
 
     [SerializeField]
-    private Image _equippedSlotImage;
+    private Image _inventoryPanel, _equippedSlotImage;
 
     [SerializeField]
     private int _itemId;
 
     [SerializeField]
-    private bool _isItemAcquired = false ,_isItemEquipped = false;
+    private bool _isItemAcquired = false, _isItemEquipped = false;
 
     private Vector3 _originalImagePos;
     private int _currentCycleIndex = 0;
@@ -29,6 +32,7 @@ public class Collectible : MonoBehaviour
     {
         Debug.Log($"Trying to collect {gameObject.name}");
         _isItemAcquired = true;
+        Destroy(gameObject);
         Collect();
     }
 
@@ -55,6 +59,7 @@ public class Collectible : MonoBehaviour
             UIManager.Instance.AllImages[_currentCycleIndex].enabled = true;
     }
 
+    /* Equip
     public void Equip()
     {
         if (!_isItemEquipped)
@@ -72,4 +77,5 @@ public class Collectible : MonoBehaviour
             _equippedSlotImage.transform.position = _originalImagePos;
         }
     }
+    */
 }

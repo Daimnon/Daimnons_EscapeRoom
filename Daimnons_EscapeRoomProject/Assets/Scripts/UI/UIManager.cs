@@ -87,15 +87,15 @@ public class UIManager : MonoBehaviour
 
     public void Equip()
     {
-        GetLastGameObjectSelected(); //Try to get last listener
+        GetLastGameObjectSelected(); // Try to get last listener
 
-        /* Trying to make sure that when pressing another item the equipped slot gets cleared before equipping a new one
-        if (lastSelectedGameObject != null && EquippedItemSlotImage.name.ToLower() != "equippeditemslot")
-        {
-            lastSelectedGameObject.transform.parent = _inventoryPanel.gameObject.transform;
-            lastSelectedGameObject.transform.position = _originalImagesPosition[_originalImagesPosition.Count];
-        }
-        */
+        //Trying to make sure that when pressing another item the equipped slot gets cleared before equipping a new one
+        //if (lastSelectedGameObject != null && EquippedItemSlotImage.name.ToLower() != "equippeditemslot")
+        //{
+        //    lastSelectedGameObject.transform.SetParent(_inventoryPanel.gameObject.transform);
+        //    lastSelectedGameObject.transform.position = _originalImagesPosition[_originalImagesPosition.Count];
+        //}
+
 
         // currently sometimes need to press twice on item which is not the first equipped
 
@@ -103,7 +103,9 @@ public class UIManager : MonoBehaviour
         {
             Debug.Log("equip");
             _isItemEquipped = true;
-            currentSelectedGameObject_Recent.transform.parent = EquippedItemSlotImage.transform;
+
+            //currentSelectedGameObject_Recent.transform.parent = EquippedItemSlotImage.transform;
+            currentSelectedGameObject_Recent.transform.SetParent(EquippedItemSlotImage.transform); // Changed to "Set Partent" becasue the Console yelled at me
             currentSelectedGameObject_Recent.transform.position = EquippedItemSlotImage.transform.position;
         }
         else
@@ -111,7 +113,8 @@ public class UIManager : MonoBehaviour
             Image currentImage = AllImages.Find(image => image.name == currentSelectedGameObject_Recent.name);
             Debug.Log("unequip");
             _isItemEquipped = false;
-            currentSelectedGameObject_Recent.transform.parent = _inventoryPanel.gameObject.transform;
+            //currentSelectedGameObject_Recent.transform.parent = _inventoryPanel.gameObject.transform;
+            currentSelectedGameObject_Recent.transform.SetParent(_inventoryPanel.gameObject.transform); // Changed to "Set Partent" becasue the Console yelled at me #2
 
             for (int i = 0; i < AllImages.Count; i++)
             {

@@ -9,7 +9,8 @@ public class DoorManager : MonoBehaviour
 
     private void Update()
     {
-        Debug.Log(UIManager.Instance.EquippedItemSlotImage.name);
+        //Debug.Log(UIManager.Instance.EquippedItemSlotImage.name);
+
         switch (UIManager.Instance.EquippedItemSlotImage.name.ToLower())
         {
             case "bluekey":

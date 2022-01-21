@@ -538,10 +538,10 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 2112616882}
-  - {fileID: 316168706}
-  - {fileID: 324416440}
   - {fileID: 1467336231}
+  - {fileID: 316168706}
+  - {fileID: 2112616882}
+  - {fileID: 324416440}
   m_Father: {fileID: 0}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1993,7 +1993,7 @@ GameObject:
   - component: {fileID: 316168703}
   - component: {fileID: 316168701}
   m_Layer: 0
-  m_Name: RedKey
+  m_Name: Test - Red Key (Server)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3654,7 +3654,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 252629911600637343, guid: a1648482d42851340b0961f999414488, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 252629911600637343, guid: a1648482d42851340b0961f999414488, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3698,7 +3698,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3874798687770068871, guid: a1648482d42851340b0961f999414488, type: 3}
       propertyPath: m_Name
-      value: Key 1
+      value: Red Key (Server)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a1648482d42851340b0961f999414488, type: 3}
@@ -4389,9 +4389,8 @@ Transform:
   - {fileID: 5014988654154676300}
   - {fileID: 1785776379}
   - {fileID: 1776810441}
-  - {fileID: 1872436997}
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &821236286
 GameObject:
@@ -7385,11 +7384,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 6586380701880126115, guid: 9295189b4f03b8a47b9873a8492069d1, type: 3}
       propertyPath: m_Name
-      value: Key 0
+      value: Blue Key (Toilet)
       objectReference: {fileID: 0}
     - target: {fileID: 7863301623646972091, guid: 9295189b4f03b8a47b9873a8492069d1, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7863301623646972091, guid: 9295189b4f03b8a47b9873a8492069d1, type: 3}
       propertyPath: m_LocalPosition.x
@@ -8856,8 +8855,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1872436996}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 110.5, y: 63.429657, z: 212}
-  m_LocalScale: {x: 0.4, y: 1, z: 1}
+  m_LocalPosition: {x: 220, y: 72.92966, z: 189.5}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 770022822}
   - {fileID: 1490837095}
@@ -8874,8 +8873,8 @@ Transform:
   - {fileID: 1333071279}
   - {fileID: 557235571}
   - {fileID: 936312612}
-  m_Father: {fileID: 795886860}
-  m_RootOrder: 7
+  m_Father: {fileID: 0}
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1872639621
 GameObject:
@@ -10288,7 +10287,7 @@ GameObject:
   - component: {fileID: 2112616879}
   - component: {fileID: 2112616883}
   m_Layer: 0
-  m_Name: FlashLight
+  m_Name: FlashLight (Server)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10364,11 +10363,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2112616877}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -33.5, y: 4.75, z: 10.75}
+  m_LocalPosition: {x: -33.5, y: 4.75, z: 10.98}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 114359953}
-  m_RootOrder: 0
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2112616883
 MonoBehaviour:
@@ -24401,7 +24400,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 7335676977748536664, guid: ed4de6493d82a0a48bb1c66c50ce826d, type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 7335676977748536664, guid: ed4de6493d82a0a48bb1c66c50ce826d, type: 3}
       propertyPath: m_LocalScale.x

@@ -60,15 +60,19 @@ public class ServersRoomState : BaseState
         //toilets room state quickhack
         if (Input.GetKey(KeyCode.Alpha4))
             CurrentStateMachine.ChangeState(((SceneState)CurrentStateMachine).ServersRoomStateInstance);
+        //theater room state quickhack
+        if (Input.GetKey(KeyCode.Alpha5))
+            CurrentStateMachine.ChangeState(((SceneState)CurrentStateMachine).TheaterStateInstance);
     }
 
-    public void GoLeft()
+    public void GoForward()
     {
-        Debug.Log("Executed Toilets Room Go Left");
-        CurrentStateMachine.ChangeState(((SceneState)CurrentStateMachine).ToiletServerIntersectionInstance);
+        //to look at vent
+        Debug.Log("Executed Toilets Room Go Right");
+        CurrentStateMachine.ChangeState(((SceneState)CurrentStateMachine).ServersRoomVentStateInstance);
     }
 
-    public void GoRight()
+    public void GoBackwards()
     {
         Debug.Log("Executed Toilets Room Go Right");
         CurrentStateMachine.ChangeState(((SceneState)CurrentStateMachine).ToiletServerIntersectionInstance);

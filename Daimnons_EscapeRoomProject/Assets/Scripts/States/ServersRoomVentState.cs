@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ServerToiletIntersectionState : BaseState
+public class ServersRoomVentState : BaseState
 {
     //get references
     #region Serialized Fields
@@ -20,15 +20,15 @@ public class ServerToiletIntersectionState : BaseState
     private float _horizontalInput;
     private float _verticalInput;
 
-    //constructor that impliments "StateB" and sM parameters to base constructor
-    public ServerToiletIntersectionState(SceneState sM) : base("ServerToiletIntersectionState", sM) { }
+    //constructor that impliments "StateD" and sM parameters to base constructor
+    public ServersRoomVentState(SceneState sM) : base("ServersRoomVentState", sM) { }
 
     //when starting state
     public override void Enter()
     {
         base.Enter();
 
-        (CurrentStateMachine as SceneState).PlayerTr.position = new Vector3(-5.5f, 3.5f, -5f);
+        (CurrentStateMachine as SceneState).PlayerTr.position = new Vector3(-26.5f, 3.5f, 2f);
         (CurrentStateMachine as SceneState).PlayerTr.rotation = Quaternion.Euler(0f, -90f, 0f);
         (CurrentStateMachine as SceneState).PlayerTr.localScale = new Vector3(1.5f, 2, 1.5f);
 
@@ -46,17 +46,6 @@ public class ServerToiletIntersectionState : BaseState
         Hacks();
     }
 
-    public override void UpdatePhysics()
-    {
-        base.UpdatePhysics();
-
-        //Vector3 velocity = _sS.PlayerRb.velocity;
-        //velocity.x = _horizontalInput * _sS.Speed;
-        //velocity.z = _verticalInput * _sS.Speed;
-        //
-        //_sS.PlayerRb.velocity = velocity;
-    }
-
     public void Hacks()
     {
         //lobby state quickhack
@@ -71,17 +60,14 @@ public class ServerToiletIntersectionState : BaseState
         //toilets room state quickhack
         if (Input.GetKey(KeyCode.Alpha4))
             CurrentStateMachine.ChangeState(((SceneState)CurrentStateMachine).ServersRoomStateInstance);
-    }
-
-    public void GoLeft()
-    {
-        Debug.Log("Executed Photo-Toilet Intersection Go Left");
-        CurrentStateMachine.ChangeState(((SceneState)CurrentStateMachine).ToiletsRoomInstance);
+        //theater room state quickhack
+        if (Input.GetKey(KeyCode.Alpha5))
+            CurrentStateMachine.ChangeState(((SceneState)CurrentStateMachine).TheaterStateInstance);
     }
 
     public void GoRight()
     {
-        Debug.Log("Executed Photo-Toilet Intersection Go Right");
+        Debug.Log("Executed Toilets Room Go Right");
         CurrentStateMachine.ChangeState(((SceneState)CurrentStateMachine).ServersRoomStateInstance);
     }
 }

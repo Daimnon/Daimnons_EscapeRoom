@@ -12,7 +12,7 @@ public class DoorManager : MonoBehaviour
 
         if (UIManager.Instance.EquippedItemSlotImage.transform.GetChild(0) != null)
         {
-            switch (UIManager.Instance.EquippedItemSlotImage.transform.GetChild(0).name.ToLower())
+            switch (UIManager.Instance.EquippedItemSlotImage.transform.GetChild(1).name.ToLower())
             {
                 case "server room key":
                     IsServersRoomLocked = false;

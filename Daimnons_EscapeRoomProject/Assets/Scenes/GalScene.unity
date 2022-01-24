@@ -958,7 +958,7 @@ GameObject:
   - component: {fileID: 175201838}
   - component: {fileID: 175201840}
   m_Layer: 5
-  m_Name: InverntoryBag
+  m_Name: InverntoryBagIcon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2186,7 +2186,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &316168701
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3825,6 +3825,14 @@ PrefabInstance:
     - target: {fileID: 252629911600637343, guid: a1648482d42851340b0961f999414488, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: -105
+      objectReference: {fileID: 0}
+    - target: {fileID: 1467118241065998512, guid: a1648482d42851340b0961f999414488, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.07
+      objectReference: {fileID: 0}
+    - target: {fileID: 1467118241065998512, guid: a1648482d42851340b0961f999414488, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 3874798687770068871, guid: a1648482d42851340b0961f999414488, type: 3}
       propertyPath: m_Name
@@ -10496,7 +10504,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!65 &2112616879
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -19451,7 +19459,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4554259172539156153}
   m_LocalRotation: {x: -0.54233944, y: -0.4443062, z: -0.41615105, w: 0.57903224}
-  m_LocalPosition: {x: -4.5443, y: 0.4431, z: -0.6102}
+  m_LocalPosition: {x: -4.596, y: 0.4431, z: -0.58}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 927513860094984187}

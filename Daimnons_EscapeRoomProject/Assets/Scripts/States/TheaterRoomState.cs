@@ -2,10 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TheaterState : BaseState
+public class TheaterRoomState : BaseState
 {
     //constructor that impliments "StatA" and sM parameters to base constructor
-    public TheaterState(SceneState sM) : base("TheaterState", sM) { }
+    public TheaterRoomState(SceneState sM) : base("TheaterRoomState", sM) { }
 
     //when starting state
     public override void Enter()
@@ -54,7 +54,7 @@ public class TheaterState : BaseState
             CurrentStateMachine.ChangeState(((SceneState)CurrentStateMachine).ServersRoomStateInstance);
         //theater room state quickhack
         if (Input.GetKey(KeyCode.Alpha5))
-            CurrentStateMachine.ChangeState(((SceneState)CurrentStateMachine).TheaterStateInstance);
+            CurrentStateMachine.ChangeState(((SceneState)CurrentStateMachine).TheaterRoomStateInstance);
     }
 
     public void GoBackwards()

@@ -62,7 +62,7 @@ public class ToiletsRoomState : BaseState
             CurrentStateMachine.ChangeState(((SceneState)CurrentStateMachine).ServersRoomStateInstance);
         //theater room state quickhack
         if (Input.GetKey(KeyCode.Alpha5))
-            CurrentStateMachine.ChangeState(((SceneState)CurrentStateMachine).TheaterStateInstance);
+            CurrentStateMachine.ChangeState(((SceneState)CurrentStateMachine).TheaterRoomStateInstance);
         //library room state quickhack
         if (Input.GetKey(KeyCode.Alpha6))
             CurrentStateMachine.ChangeState(((SceneState)CurrentStateMachine).ServersRoomStateInstance);

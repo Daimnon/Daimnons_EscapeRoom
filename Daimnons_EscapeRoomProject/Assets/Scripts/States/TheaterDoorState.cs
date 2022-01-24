@@ -55,13 +55,13 @@ public class TheaterDoorState : BaseState
             CurrentStateMachine.ChangeState(((SceneState)CurrentStateMachine).ServersRoomStateInstance);
         //theater room state quickhack
         if (Input.GetKey(KeyCode.Alpha5))
-            CurrentStateMachine.ChangeState(((SceneState)CurrentStateMachine).TheaterStateInstance);
+            CurrentStateMachine.ChangeState(((SceneState)CurrentStateMachine).TheaterRoomStateInstance);
     }
 
     public void GoForward()
     {
         Debug.Log("Executed Lobby Go Left");
-        CurrentStateMachine.ChangeState(((SceneState)CurrentStateMachine).TheaterStateInstance);
+        CurrentStateMachine.ChangeState(((SceneState)CurrentStateMachine).TheaterRoomStateInstance);
     }
 
     public void GoBackwards()

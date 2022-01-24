@@ -28,8 +28,8 @@ public class ServersRoomVentState : BaseState
     {
         base.Enter();
 
-        (CurrentStateMachine as SceneState).PlayerTr.position = new Vector3(-26.5f, 3.5f, 2f);
-        (CurrentStateMachine as SceneState).PlayerTr.rotation = Quaternion.Euler(0f, -90f, 0f);
+        (CurrentStateMachine as SceneState).PlayerTr.position = new Vector3(-62f, 3.5f, 2f);
+        (CurrentStateMachine as SceneState).PlayerTr.rotation = Quaternion.Euler(0f, 60f, 0f);
         (CurrentStateMachine as SceneState).PlayerTr.localScale = new Vector3(1.5f, 2, 1.5f);
 
         _horizontalInput = 0f;
@@ -62,7 +62,7 @@ public class ServersRoomVentState : BaseState
             CurrentStateMachine.ChangeState(((SceneState)CurrentStateMachine).ServersRoomStateInstance);
         //theater room state quickhack
         if (Input.GetKey(KeyCode.Alpha5))
-            CurrentStateMachine.ChangeState(((SceneState)CurrentStateMachine).TheaterStateInstance);
+            CurrentStateMachine.ChangeState(((SceneState)CurrentStateMachine).TheaterRoomStateInstance);
     }
 
     public void GoRight()

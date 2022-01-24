@@ -14,7 +14,7 @@ public class SceneState : StateMachine
     public ServersRoomState ServersRoomStateInstance;
     public ServersRoomVentState ServersRoomVentStateInstance;
     public TheaterDoorState TheaterDoorStateInstace;
-    public TheaterState TheaterStateInstance;
+    public TheaterRoomState TheaterRoomStateInstance;
 
     public List<GameObject> InteractableGO;
     public List<Interactable> InteractableGOScripts;
@@ -32,7 +32,7 @@ public class SceneState : StateMachine
         ServersRoomStateInstance = new ServersRoomState(this);
         ServersRoomVentStateInstance = new ServersRoomVentState(this);
         TheaterDoorStateInstace = new TheaterDoorState(this);
-        TheaterStateInstance = new TheaterState(this);
+        TheaterRoomStateInstance = new TheaterRoomState(this);
 }
 
     protected override BaseState GetInitialState()
@@ -79,15 +79,12 @@ public class SceneState : StateMachine
                     Debug.Log("Get yo key dumbass");
                 break;
 
-            //case "ToiletsRoomState":
-            //    ToiletsRoomInstance.GoRight();
-            //    break;
-            //
-            //case "ServersRoomState":
-            //    ServersRoomStateInstance.GoRight();
-            //    break;
-            //default:
-            //    break;
+            case "ServersRoomVentState":
+                ServersRoomVentStateInstance.GoRight();
+                break;
+
+            default:
+                break;
         }
     }
 
@@ -133,6 +130,15 @@ public class SceneState : StateMachine
             case "ServersRoomState":
                 ServersRoomStateInstance.GoBackwards();
                 break;
+
+            case "TheaterDoorState":
+                TheaterDoorStateInstace.GoBackwards();
+                break;
+
+            case "TheaterRoomState":
+                TheaterRoomStateInstance.GoBackwards();
+                break;
+
             default:
                 break;
         }

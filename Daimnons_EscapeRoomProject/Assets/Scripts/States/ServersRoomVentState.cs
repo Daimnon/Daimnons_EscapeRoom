@@ -51,18 +51,21 @@ public class ServersRoomVentState : BaseState
         //lobby state quickhack
         if (Input.GetKey(KeyCode.Alpha1))
             CurrentStateMachine.ChangeState(((SceneState)CurrentStateMachine).LobbyStateInstance);
-        //photo & toilet intersection state quickhack
+        //toilet-servers intersection state quickhack
         if (Input.GetKey(KeyCode.Alpha2))
             CurrentStateMachine.ChangeState(((SceneState)CurrentStateMachine).ToiletServerIntersectionInstance);
-        //photography room state quickhack
+        //toilets room state quickhack
         if (Input.GetKey(KeyCode.Alpha3))
             CurrentStateMachine.ChangeState(((SceneState)CurrentStateMachine).ToiletsRoomInstance);
-        //toilets room state quickhack
+        //servers room state quickhack
         if (Input.GetKey(KeyCode.Alpha4))
-            CurrentStateMachine.ChangeState(((SceneState)CurrentStateMachine).ServersRoomStateInstance);
+            CurrentStateMachine.ChangeState(((SceneState)CurrentStateMachine).ServersRoomVentStateInstance);
         //theater room state quickhack
         if (Input.GetKey(KeyCode.Alpha5))
             CurrentStateMachine.ChangeState(((SceneState)CurrentStateMachine).TheaterRoomStateInstance);
+        //library room state quickhack
+        if (Input.GetKey(KeyCode.Alpha6))
+            CurrentStateMachine.ChangeState(((SceneState)CurrentStateMachine).LibraryRoomStateInstance);
     }
 
     public void GoRight()

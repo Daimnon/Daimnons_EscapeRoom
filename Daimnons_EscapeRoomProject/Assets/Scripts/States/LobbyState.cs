@@ -52,10 +52,13 @@ public class LobbyState : BaseState
             CurrentStateMachine.ChangeState(((SceneState)CurrentStateMachine).ToiletsRoomInstance);
         //servers room state quickhack
         if (Input.GetKey(KeyCode.Alpha4))
-            CurrentStateMachine.ChangeState(((SceneState)CurrentStateMachine).ServersRoomStateInstance);
+            CurrentStateMachine.ChangeState(((SceneState)CurrentStateMachine).ServersRoomVentStateInstance);
         //theater room state quickhack
         if (Input.GetKey(KeyCode.Alpha5))
             CurrentStateMachine.ChangeState(((SceneState)CurrentStateMachine).TheaterRoomStateInstance);
+        //library room state quickhack
+        if (Input.GetKey(KeyCode.Alpha6))
+            CurrentStateMachine.ChangeState(((SceneState)CurrentStateMachine).LibraryRoomStateInstance);
     }
 
     public void GoLeft()

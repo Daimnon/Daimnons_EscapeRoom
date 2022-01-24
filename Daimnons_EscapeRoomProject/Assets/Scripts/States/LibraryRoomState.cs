@@ -2,48 +2,36 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ServersRoomState : BaseState
+public class LibraryRoomState : BaseState
 {
-    //get references
-    #region Serialized Fields
-    [SerializeField]
-    private Camera _mainCam;
-
-    [SerializeField]
-    private Transform _mainCamTr;
-
-    [SerializeField]
-    private Collider _playerCol;
-    #endregion
-
-    //movement inputs
-    private float _horizontalInput;
-    private float _verticalInput;
-
-    //constructor that impliments "StateD" and sM parameters to base constructor
-    public ServersRoomState(SceneState sM) : base("ServersRoomState", sM) { }
+    //constructor that impliments "StatA" and sM parameters to base constructor
+    public LibraryRoomState(SceneState sM) : base("LibraryRoomState", sM) { }
 
     //when starting state
     public override void Enter()
     {
         base.Enter();
 
-        (CurrentStateMachine as SceneState).PlayerTr.position = new Vector3(-26.5f, 3.5f, 2f);
-        (CurrentStateMachine as SceneState).PlayerTr.rotation = Quaternion.Euler(0f, -90f, 0f);
-        (CurrentStateMachine as SceneState).PlayerTr.localScale = new Vector3(1.5f, 2, 1.5f);
+        (CurrentStateMachine as SceneState).IsCurrentState = true;
 
-        _horizontalInput = 0f;
-        _verticalInput = 0f;
+        (CurrentStateMachine as SceneState).PlayerTr.position = new Vector3(-23f, 3.5f, 36f);
+        (CurrentStateMachine as SceneState).PlayerTr.rotation = Quaternion.Euler(0f, 105f, 0f);
+        (CurrentStateMachine as SceneState).PlayerTr.localScale = new Vector3(1.5f, 2, 1.5f);
     }
 
     //when updating state
     public override void UpdateLogic()
     {
         base.UpdateLogic();
-        _horizontalInput = Input.GetAxis("Horizontal");
-        _verticalInput = Input.GetAxis("Vertical");
 
         Hacks();
+    }
+
+    public override void Exit()
+    {
+        base.Exit();
+
+        (CurrentStateMachine as SceneState).IsCurrentState = false;
     }
 
     public void Hacks()
@@ -68,16 +56,10 @@ public class ServersRoomState : BaseState
             CurrentStateMachine.ChangeState(((SceneState)CurrentStateMachine).LibraryRoomStateInstance);
     }
 
-    public void GoForward()
-    {
-        //to look at vent
-        Debug.Log("Executed Toilets Room Go Right");
-        CurrentStateMachine.ChangeState(((SceneState)CurrentStateMachine).ServersRoomVentStateInstance);
-    }
-
     public void GoBackwards()
     {
-        Debug.Log("Executed Toilets Room Go Right");
-        CurrentStateMachine.ChangeState(((SceneState)CurrentStateMachine).ToiletServerIntersectionInstance);
+        //to library
+        Debug.Log("Executed Lobby Go Left");
+        CurrentStateMachine.ChangeState(((SceneState)CurrentStateMachine).ServersRoomVentStateInstance);
     }
 }

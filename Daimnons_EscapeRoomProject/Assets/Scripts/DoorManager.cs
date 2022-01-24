@@ -4,22 +4,24 @@ using UnityEngine;
 
 public class DoorManager : MonoBehaviour
 {
-    [SerializeField]
-    private bool _isServersRoomLocked = true, _isTheaterLocked = true, _isBedRoomLocked = true, _isLibraryLocked = true;
+    public bool IsServersRoomLocked = true, IsTheaterLocked = true, IsBedRoomLocked = true, IsLibraryLocked = true;
 
     private void Update()
     {
-        //Debug.Log(UIManager.Instance.EquippedItemSlotImage.name);
+        Debug.Log(UIManager.Instance.EquippedItemSlotImage.transform.GetChild(0).name.ToLower());
 
-        switch (UIManager.Instance.EquippedItemSlotImage.name.ToLower())
+        if (UIManager.Instance.EquippedItemSlotImage.transform.GetChild(0) != null)
         {
-            case "bluekey":
-                _isServersRoomLocked = false;
-                break;
+            switch (UIManager.Instance.EquippedItemSlotImage.transform.GetChild(0).name.ToLower())
+            {
+                case "bluekey":
+                    IsServersRoomLocked = false;
+                    break;
 
-            default:
-                _isServersRoomLocked = true;
-                break;
+                default:
+                    IsServersRoomLocked = true;
+                    break;
+            }
         }
     }
 }

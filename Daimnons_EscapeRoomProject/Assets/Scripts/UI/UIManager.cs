@@ -31,18 +31,15 @@ public class UIManager : MonoBehaviour
     #region Fields
     private List<Vector3> _originalImagesPosition;
     private GameObject? lastSelectedGameObject;
-    private GameObject currentSelectedGameObject_Recent;
+    private GameObject CurrentSelectedGameObject;
     private bool _isInventoryOpen = false, _isItemEquipped = false;
     #endregion
 
     #region Public Fields
     public List<GameObject> AllCollectibles;
-
     public List<Image> AllImages;
     
     public Image EquippedItemSlotImage;
-
-
     #endregion
 
     private void Awake()
@@ -55,17 +52,17 @@ public class UIManager : MonoBehaviour
         for (int i = 0; i < AllImages.Count; i++)
             _originalImagesPosition[i] = AllImages[i].transform.position;
 
-        lastSelectedGameObject = currentSelectedGameObject_Recent;
+        lastSelectedGameObject = CurrentSelectedGameObject;
     }
 
     #region Methods
     // Try to get last listener
     private void GetLastGameObjectSelected()
     {
-        if (eventSystem.currentSelectedGameObject != currentSelectedGameObject_Recent)
+        if (eventSystem.currentSelectedGameObject != CurrentSelectedGameObject)
         {
-            lastSelectedGameObject = currentSelectedGameObject_Recent;
-            currentSelectedGameObject_Recent = eventSystem.currentSelectedGameObject;
+            lastSelectedGameObject = CurrentSelectedGameObject;
+            CurrentSelectedGameObject = eventSystem.currentSelectedGameObject;
         }
     }
 
@@ -104,22 +101,21 @@ public class UIManager : MonoBehaviour
             Debug.Log("equip");
             _isItemEquipped = true;
 
-            //currentSelectedGameObject_Recent.transform.parent = EquippedItemSlotImage.transform;
-            currentSelectedGameObject_Recent.transform.SetParent(EquippedItemSlotImage.transform); // Changed to "Set Partent" becasue the Console yelled at me
-            currentSelectedGameObject_Recent.transform.position = EquippedItemSlotImage.transform.position;
+            CurrentSelectedGameObject.transform.SetParent(EquippedItemSlotImage.transform);
+            CurrentSelectedGameObject.transform.position = EquippedItemSlotImage.transform.position;
         }
         else
         {
-            Image currentImage = AllImages.Find(image => image.name == currentSelectedGameObject_Recent.name);
+            Image currentImage = AllImages.Find(image => image.name == CurrentSelectedGameObject.name);
             Debug.Log("unequip");
             _isItemEquipped = false;
             //currentSelectedGameObject_Recent.transform.parent = _inventoryPanel.gameObject.transform;
-            currentSelectedGameObject_Recent.transform.SetParent(_inventoryPanel.gameObject.transform); // Changed to "Set Partent" becasue the Console yelled at me #2
+            CurrentSelectedGameObject.transform.SetParent(_inventoryPanel.gameObject.transform); // Changed to "Set Partent" becasue the Console yelled at me #2
 
             for (int i = 0; i < AllImages.Count; i++)
             {
                 if (AllImages[i].name == currentImage.name)
-                    currentSelectedGameObject_Recent.transform.position = _originalImagesPosition[i];
+                    CurrentSelectedGameObject.transform.position = _originalImagesPosition[i];
             }
         }
     }

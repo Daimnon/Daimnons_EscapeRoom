@@ -5,8 +5,8 @@ using UnityEngine;
 
 public class SceneState : StateMachine
 {
-    //[SerializeField]
-    //private Transform _player;
+    [SerializeField]
+    private DoorManager _doorManagerInstance;
 
     public LobbyState LobbyStateInstance;
     public ServerToiletIntersectionState ToiletServerIntersectionInstance;
@@ -89,7 +89,10 @@ public class SceneState : StateMachine
                 break;
 
             case "ServerToiletIntersectionState":
-                ToiletServerIntersectionInstance.GoRight();
+                if (!_doorManagerInstance.IsServersRoomLocked)
+                    ToiletServerIntersectionInstance.GoRight();
+                else
+                    Debug.Log("Get yo key dumbass");
                 break;
 
             case "ToiletsRoomState":

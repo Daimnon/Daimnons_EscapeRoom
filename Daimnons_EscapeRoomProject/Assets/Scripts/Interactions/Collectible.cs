@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
+
 
 public class Collectible : MonoBehaviour
 {
@@ -10,6 +12,9 @@ public class Collectible : MonoBehaviour
     //
     //[SerializeField]
     //private Collider _itemCol;
+
+    [SerializeField]
+    private UIManager _uiManager;
 
     [SerializeField]
     private Image _inventoryPanel, _equippedSlotImage;
@@ -42,6 +47,7 @@ public class Collectible : MonoBehaviour
         _currentCycleIndex = Mathf.Clamp(_currentCycleIndex, 0, UIManager.Instance.AllCollectibles.Count - 1);
 
         Debug.Log(_currentCycleIndex);
+        StartCoroutine(_uiManager.DisplayLogText($"Collected: {gameObject.name}"));
 
         CollectGo();
         ShowImage();

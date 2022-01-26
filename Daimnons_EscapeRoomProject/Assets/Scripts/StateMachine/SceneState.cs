@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine.UI;
 using UnityEngine;
 
+// Fix library interaction
+
 public class SceneState : StateMachine
 {
     [SerializeField]
@@ -45,7 +47,6 @@ public class SceneState : StateMachine
 
     public void GoLeft()
     {
-        //not returning correct state, returning only 1st state
         BaseState currentState = CurrentState;
         Debug.Log("Executing SceneState Go Left");
 

@@ -7,23 +7,17 @@ using TMPro;
 
 public class Collectible : MonoBehaviour
 {
-    //[SerializeField]
-    //private Renderer _itemRend;
-    //
-    //[SerializeField]
-    //private Collider _itemCol;
-
     [SerializeField]
     private UIManager _uiManager;
 
     [SerializeField]
-    private Image _inventoryPanel, _equippedSlotImage;
+    private Image _equippedSlotImage;
 
     [SerializeField]
     private int _itemId;
 
     [SerializeField]
-    private bool _isItemAcquired = false, _isItemEquipped = false;
+    private bool _isItemAcquired = false;
 
     private Vector3 _originalImagePos;
     private int _currentCycleIndex = 0;
@@ -64,24 +58,4 @@ public class Collectible : MonoBehaviour
         if (_isItemAcquired)
             UIManager.Instance.AllImages[_currentCycleIndex].enabled = true;
     }
-
-    /* Equip
-    public void Equip()
-    {
-        if (!_isItemEquipped)
-        {
-            Debug.Log("equip");
-            _isItemEquipped = true;
-            _equippedSlotImage.transform.parent = UIManager.Instance.EquippedItemSlotImage.transform;
-            _equippedSlotImage.transform.position = UIManager.Instance.EquippedItemSlotImage.transform.position;
-        }
-        else
-        {
-            Debug.Log("unequip");
-            _isItemEquipped = false;
-            _equippedSlotImage.transform.parent = _inventoryPanel.gameObject.transform;
-            _equippedSlotImage.transform.position = _originalImagePos;
-        }
-    }
-    */
 }

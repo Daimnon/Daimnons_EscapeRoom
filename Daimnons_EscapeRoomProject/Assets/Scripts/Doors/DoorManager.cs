@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class DoorManager : MonoBehaviour
 {
-    public bool IsServersRoomLocked = true, IsTheaterLocked = true, IsBedRoomLocked = true, IsLibraryLocked = true;
+    public bool IsServersRoomLocked = true, IsTheaterLocked = true, IsLibraryKeyEquipped = false;
 
     private void Update()
     {
@@ -18,8 +18,18 @@ public class DoorManager : MonoBehaviour
                     IsServersRoomLocked = false;
                     break;
 
+                case "theater room key":
+                    IsTheaterLocked = false;
+                    break;
+
+                case "library room key":
+                    IsLibraryKeyEquipped = true;
+                    break;
+
                 default:
                     IsServersRoomLocked = true;
+                    IsTheaterLocked = true;
+                    IsLibraryKeyEquipped = false;
                     break;
             }
         }

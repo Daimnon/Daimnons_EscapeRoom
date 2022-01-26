@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+// fix buttons func in relation to rotation
 public class ServersRoomState : BaseState
 {
     //get references
@@ -70,7 +70,6 @@ public class ServersRoomState : BaseState
 
     public void GoForward()
     {
-        //to look at vent
         Debug.Log("Executed Toilets Room Go Right");
         CurrentStateMachine.ChangeState(((SceneState)CurrentStateMachine).ServersRoomVentStateInstance);
     }

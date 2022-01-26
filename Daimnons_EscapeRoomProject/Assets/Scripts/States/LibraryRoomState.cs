@@ -56,9 +56,15 @@ public class LibraryRoomState : BaseState
             CurrentStateMachine.ChangeState(((SceneState)CurrentStateMachine).LibraryRoomStateInstance);
     }
 
+    public void GoRight()
+    {
+        Debug.Log("Executed Lobby Go Left");
+        CurrentStateMachine.ChangeState(((SceneState)CurrentStateMachine).LobbyStateInstance);
+        UIManager.Instance.IsLibraryLocked = false;
+    }
+
     public void GoBackwards()
     {
-        //to library
         Debug.Log("Executed Lobby Go Left");
         CurrentStateMachine.ChangeState(((SceneState)CurrentStateMachine).ServersRoomVentStateInstance);
     }

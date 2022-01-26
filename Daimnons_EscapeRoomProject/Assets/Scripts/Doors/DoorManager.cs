@@ -8,13 +8,13 @@ public class DoorManager : MonoBehaviour
 
     private void Update()
     {
-        Debug.Log(UIManager.Instance.EquippedItemSlotImage.transform.GetChild(0).name.ToLower());
+        //Debug.Log(UIManager.Instance.EquippedItemSlotImage.transform.GetChild(0).name.ToLower());
 
         if (UIManager.Instance.EquippedItemSlotImage.transform.GetChild(0) != null)
         {
-            switch (UIManager.Instance.EquippedItemSlotImage.transform.GetChild(0).name.ToLower())
+            switch (UIManager.Instance.EquippedItemSlotImage.transform.GetChild(1).name.ToLower())
             {
-                case "bluekey":
+                case "server room key":
                     IsServersRoomLocked = false;
                     break;
 

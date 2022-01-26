@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 using UnityEngine;
+using TMPro;
 
 public class UIManager : MonoBehaviour
 {
@@ -21,11 +22,18 @@ public class UIManager : MonoBehaviour
     #endregion
 
     #region Serialized Fields
+    [Header("Refrences")]
     [SerializeField]
     private EventSystem eventSystem;
     
     [SerializeField]
     private GameObject _inventoryPanel, _equippedItemSlotGO;
+
+    [SerializeField]
+    private TextMeshProUGUI _logText, _itemNameText;
+
+    [SerializeField]
+    private GameObject _arrowButtons;
     #endregion
 
     #region Fields
@@ -36,9 +44,11 @@ public class UIManager : MonoBehaviour
     #endregion
 
     #region Public Fields
+    [Header("Lists")]
     public List<GameObject> AllCollectibles;
     public List<Image> AllImages;
     
+    [HideInInspector]
     public Image EquippedItemSlotImage;
     #endregion
 
@@ -53,6 +63,11 @@ public class UIManager : MonoBehaviour
             _originalImagesPosition[i] = AllImages[i].transform.position;
 
         lastSelectedGameObject = CurrentSelectedGameObject;
+    }
+
+    private void Start()
+    {
+        _logText.text = "test";
     }
 
     #region Methods
@@ -73,12 +88,14 @@ public class UIManager : MonoBehaviour
             _isInventoryOpen = true;
             _inventoryPanel.SetActive(true);
             _equippedItemSlotGO.SetActive(true);
+            _arrowButtons.SetActive(false);
         }
         else
         {
             _isInventoryOpen = false;
             _inventoryPanel.SetActive(false);
             _equippedItemSlotGO.SetActive(false);
+            _arrowButtons.SetActive(true);
         }
     }
 
@@ -103,14 +120,17 @@ public class UIManager : MonoBehaviour
 
             CurrentSelectedGameObject.transform.SetParent(EquippedItemSlotImage.transform);
             CurrentSelectedGameObject.transform.position = EquippedItemSlotImage.transform.position;
+
+            _itemNameText.text = CurrentSelectedGameObject.name;
         }
         else
         {
             Image currentImage = AllImages.Find(image => image.name == CurrentSelectedGameObject.name);
             Debug.Log("unequip");
             _isItemEquipped = false;
-            //currentSelectedGameObject_Recent.transform.parent = _inventoryPanel.gameObject.transform;
+
             CurrentSelectedGameObject.transform.SetParent(_inventoryPanel.gameObject.transform); // Changed to "Set Partent" becasue the Console yelled at me #2
+            _itemNameText.text = "";
 
             for (int i = 0; i < AllImages.Count; i++)
             {
@@ -119,5 +139,14 @@ public class UIManager : MonoBehaviour
             }
         }
     }
+
+    public IEnumerator DisplayLogText(string input)
+    {
+        _logText.text = input;
+        yield return new WaitForSeconds(3f);
+        print("waited 3 seconds");
+        _logText.text = "something";
+    }
+
     #endregion
 }

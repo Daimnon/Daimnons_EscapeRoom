@@ -34,6 +34,9 @@ public class MouseLook : MonoBehaviour
 
 			transform.localRotation = xQuat * yQuat; //Quaternions seem to rotate more consistently than EulerAngles. Sensitivity seemed to change slightly at certain degrees using Euler. transform.localEulerAngles = new Vector3(-rotation.y, rotation.x, 0);
         }
+
 	}
+
+	
 }
 

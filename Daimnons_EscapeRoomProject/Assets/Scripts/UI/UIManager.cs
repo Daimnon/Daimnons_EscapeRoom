@@ -147,6 +147,5 @@ public class UIManager : MonoBehaviour
         print("waited 3 seconds");
         _logText.text = "something";
     }
-
     #endregion
 }

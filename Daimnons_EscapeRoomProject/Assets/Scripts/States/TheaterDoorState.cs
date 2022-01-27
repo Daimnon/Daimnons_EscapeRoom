@@ -72,4 +72,5 @@ public class TheaterDoorState : BaseState
         Debug.Log("Executed Lobby Go Left");
         CurrentStateMachine.ChangeState(((SceneState)CurrentStateMachine).LobbyStateInstance);
     }
+
 }

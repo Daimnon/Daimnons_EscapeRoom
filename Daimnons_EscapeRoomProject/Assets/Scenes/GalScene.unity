@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.4487921, g: 0.4988513, b: 0.57569444, a: 1}
+  m_IndirectSpecularColor: {r: 0.44879138, g: 0.49885052, b: 0.57569337, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -637,11 +637,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _uiManager: {fileID: 726448221}
-  _inventoryPanel: {fileID: 2013156161}
   _equippedSlotImage: {fileID: 2013156161}
   _itemId: 1
   _isItemAcquired: 0
-  _isItemEquipped: 0
 --- !u!65 &140413233
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2218,11 +2216,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _uiManager: {fileID: 0}
-  _inventoryPanel: {fileID: 926138943}
   _equippedSlotImage: {fileID: 2013156161}
   _itemId: 1
   _isItemAcquired: 0
-  _isItemEquipped: 0
 --- !u!65 &316168703
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4022,6 +4018,7 @@ MonoBehaviour:
   - {fileID: 1984331710}
   - {fileID: 1872639623}
   EquippedItemSlotImage: {fileID: 217636595}
+  IsLibraryLocked: 1
 --- !u!4 &726448222
 Transform:
   m_ObjectHideFlags: 0
@@ -5595,8 +5592,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6bbed6b8a2cb744b8830a8cbf0ca477, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _buttons: {fileID: 529958620}
   sensitivity: 2
   yRotationLimit: 88
+  xRotationLimit: 88
 --- !u!4 &982909037
 Transform:
   m_ObjectHideFlags: 0
@@ -6234,7 +6233,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 
+  m_text: Hold 'Left Shift' To look Around
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -6261,8 +6260,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 24
-  m_fontSizeBase: 24
+  m_fontSize: 20
+  m_fontSizeBase: 20
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -6817,11 +6816,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _uiManager: {fileID: 726448221}
-  _inventoryPanel: {fileID: 1898162061}
   _equippedSlotImage: {fileID: 1898162061}
   _itemId: 2
   _isItemAcquired: 0
-  _isItemEquipped: 0
 --- !u!1 &1178171051
 GameObject:
   m_ObjectHideFlags: 0
@@ -7516,13 +7513,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: feb99175c192cc1418fc29473326ed1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DoorManagerInstance: {fileID: 1515373391}
   InteractableGO: []
   InteractableGOScripts: []
+  _doorManagerInstance: {fileID: 1515373391}
   MainCamTr: {fileID: 963194228}
   PlayerTr: {fileID: 982909037}
   LeftArrowUI: {fileID: 1036322560}
   RightArrowUI: {fileID: 565448589}
+  playerMouseLook: {fileID: 982909036}
   IsCurrentState: 0
 --- !u!4 &1379089897
 Transform:
@@ -7552,7 +7550,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   IsServersRoomLocked: 1
   IsTheaterLocked: 1
-  IsLibraryLocked: 1
+  IsLibraryKeyEquipped: 0
 --- !u!114 &1379089899
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7891,11 +7889,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _uiManager: {fileID: 726448221}
-  _inventoryPanel: {fileID: 273863545}
   _equippedSlotImage: {fileID: 273863545}
   _itemId: 0
   _isItemAcquired: 0
-  _isItemEquipped: 0
 --- !u!65 &1467336230
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8336,7 +8332,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   IsServersRoomLocked: 1
   IsTheaterLocked: 1
-  IsLibraryLocked: 1
+  IsLibraryKeyEquipped: 0
 --- !u!4 &1515373392
 Transform:
   m_ObjectHideFlags: 0
@@ -11506,11 +11502,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _uiManager: {fileID: 0}
-  _inventoryPanel: {fileID: 926138943}
   _equippedSlotImage: {fileID: 1938920908}
   _itemId: 0
   _isItemAcquired: 0
-  _isItemEquipped: 0
 --- !u!1 &2141014798
 GameObject:
   m_ObjectHideFlags: 0

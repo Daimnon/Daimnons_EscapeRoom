@@ -7,8 +7,6 @@ using UnityEngine;
 
 public class SceneState : StateMachine
 {
-    [SerializeField]
-    private DoorManager _doorManagerInstance;
 
     public LobbyState LobbyStateInstance;
     public ToiletServerIntersectionState ToiletServerIntersectionInstance;
@@ -22,8 +20,12 @@ public class SceneState : StateMachine
 
     public List<GameObject> InteractableGO;
     public List<Interactable> InteractableGOScripts;
+
+    [Header("Refrences")]
+    [SerializeField] private DoorManager _doorManagerInstance;
     public Transform MainCamTr, PlayerTr;
     public Button LeftArrowUI, RightArrowUI;
+    public MouseLook playerMouseLook;
 
     public bool IsCurrentState;
 

@@ -2,11 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class LobbyState : BaseState
+public class LibraryRoomEntranceState : BaseState
 {
-
     //constructor that impliments "StatA" and sM parameters to base constructor
-    public LobbyState(SceneState sM) : base("LobbyState", sM) { }
+    public LibraryRoomEntranceState(SceneState sM) : base("LibraryRoomEntranceState", sM) { }
 
     //when starting state
     public override void Enter()
@@ -15,7 +14,7 @@ public class LobbyState : BaseState
 
         (CurrentStateMachine as SceneState).IsCurrentState = true;
 
-        (CurrentStateMachine as SceneState).PlayerTr.position = new Vector3(0f, 3.5f, -5f);
+        (CurrentStateMachine as SceneState).PlayerTr.position = new Vector3(-16f, 3.5f, 11.5f);
         (CurrentStateMachine as SceneState).PlayerTr.rotation = Quaternion.Euler(0f, 0f, 0f);
         (CurrentStateMachine as SceneState).PlayerTr.localScale = new Vector3(1.5f, 2, 1.5f);
     }
@@ -26,10 +25,6 @@ public class LobbyState : BaseState
         base.UpdateLogic();
 
         Hacks();
-
-        /* for movement
-         * if (Mathf.Abs(_verticalInput) > Mathf.Epsilon)
-            StateMachine.ChangeState(((SceneState)StateMachine).StateBInstance);*/
     }
 
     public override void Exit()
@@ -56,6 +51,9 @@ public class LobbyState : BaseState
         //theater room state quickhack
         if (Input.GetKey(KeyCode.Alpha5))
             CurrentStateMachine.ChangeState(((SceneState)CurrentStateMachine).TheaterRoomStateInstance);
+        //library room entrance state quickhack
+        if (Input.GetKey(KeyCode.Alpha6))
+            CurrentStateMachine.ChangeState(((SceneState)CurrentStateMachine).LibraryRoomEntranceStateInstance);
         //library room state quickhack
         if (Input.GetKey(KeyCode.Alpha6))
             CurrentStateMachine.ChangeState(((SceneState)CurrentStateMachine).LibraryRoomStateInstance);
@@ -63,19 +61,25 @@ public class LobbyState : BaseState
 
     public void GoLeft()
     {
-        Debug.Log("Executed Lobby Go Left");
+        Debug.Log("Executed Library Room Entrance State Go Left");
         CurrentStateMachine.ChangeState(((SceneState)CurrentStateMachine).ToiletServerIntersectionInstance);
     }
 
     public void GoRight()
     {
-        Debug.Log("Executed Lobby Go Right");
+        Debug.Log("Executed Library Room Entrance State Go Left");
         CurrentStateMachine.ChangeState(((SceneState)CurrentStateMachine).TheaterDoorStateInstace);
     }
 
     public void GoForward()
     {
-        Debug.Log("Executed Lobby Go Left");
-        CurrentStateMachine.ChangeState(((SceneState)CurrentStateMachine).LibraryRoomEntranceStateInstance);
+        Debug.Log("Executed Library Room Entrance State Go Forward");
+        CurrentStateMachine.ChangeState(((SceneState)CurrentStateMachine).LibraryRoomStateInstance);
+    }
+
+    public void GoBackwards()
+    {
+        Debug.Log("Executed Library Room Entrance State Go Backwards");
+        CurrentStateMachine.ChangeState(((SceneState)CurrentStateMachine).LobbyStateInstance);
     }
 }

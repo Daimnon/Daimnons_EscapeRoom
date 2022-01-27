@@ -1,27 +1,44 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using TMPro;
+
 
 public class Interactable : MonoBehaviour
 {
-    public GameObject CurrentGO;
-    public string GOName;
-    public bool IsInteracting = false;
+    [SerializeField]
+    private List<GameObject> _interactables;
 
-    private void Awake()
-    {
-        GOName = CurrentGO.name;
-    }
+    [SerializeField]
+    private int _itemId;
+
+    [SerializeField]
+    private bool _isItemTouched = false;
+
+    private Vector3 _originalImagePos;
+    private int _currentCycleIndex = 0;
 
     private void OnMouseDown()
     {
-        IsInteracting = true;
+        Debug.Log($"Trying to collect {gameObject.name}");
+        _isItemTouched = true;
+        Interact();
     }
 
-    private void OnMouseUp()
+    public void Interact()
     {
-        IsInteracting = false;
+        _currentCycleIndex = _itemId;
+        _currentCycleIndex = Mathf.Clamp(_currentCycleIndex, 0, _interactables.Count - 1);
+
+        Debug.Log(_currentCycleIndex);
+
+        OpenLibraryDoor();
     }
 
-    public virtual void Interact() { }
+    private void OpenLibraryDoor()
+    {
+        if (_isItemTouched)
+            UIManager.Instance.IsLibraryLocked = true;
+    }
 }

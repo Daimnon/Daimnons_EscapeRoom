@@ -50,11 +50,13 @@ public class UIManager : MonoBehaviour
     
     [HideInInspector]
     public Image EquippedItemSlotImage;
+
+    public bool IsLibraryLocked = true;
     #endregion
 
     private void Awake()
     {
-        _instance = this;
+            _instance = this;
 
         foreach (Image image in AllImages)
             image.enabled = false; // turn off to test, current working subject is blue key, current test subject is red key
@@ -63,11 +65,6 @@ public class UIManager : MonoBehaviour
             _originalImagesPosition[i] = AllImages[i].transform.position;
 
         lastSelectedGameObject = CurrentSelectedGameObject;
-    }
-
-    private void Start()
-    {
-        _logText.text = "test";
     }
 
     #region Methods
@@ -130,7 +127,7 @@ public class UIManager : MonoBehaviour
             _isItemEquipped = false;
 
             CurrentSelectedGameObject.transform.SetParent(_inventoryPanel.gameObject.transform); // Changed to "Set Partent" becasue the Console yelled at me #2
-            _itemNameText.text = "";
+            _itemNameText.text = null;
 
             for (int i = 0; i < AllImages.Count; i++)
             {
@@ -144,9 +141,9 @@ public class UIManager : MonoBehaviour
     {
         _logText.text = input;
         yield return new WaitForSeconds(3f);
+
         print("waited 3 seconds");
         _logText.text = "something";
     }
-
     #endregion
 }

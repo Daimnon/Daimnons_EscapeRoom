@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine.UI;
 using UnityEngine;
 
+// Fix library interaction
+
 public class SceneState : StateMachine
 {
     [SerializeField]
@@ -15,15 +17,15 @@ public class SceneState : StateMachine
     public ServersRoomVentState ServersRoomVentStateInstance;
     public TheaterDoorState TheaterDoorStateInstace;
     public TheaterRoomState TheaterRoomStateInstance;
+    public LibraryRoomEntranceState LibraryRoomEntranceStateInstance;
     public LibraryRoomState LibraryRoomStateInstance;
 
     public List<GameObject> InteractableGO;
     public List<Interactable> InteractableGOScripts;
     public Transform MainCamTr, PlayerTr;
     public Button LeftArrowUI, RightArrowUI;
-    public bool IsCurrentState;
 
-    private Vector2 _mousePos;
+    public bool IsCurrentState;
 
     private void Awake()
     {
@@ -34,6 +36,7 @@ public class SceneState : StateMachine
         ServersRoomVentStateInstance = new ServersRoomVentState(this);
         TheaterDoorStateInstace = new TheaterDoorState(this);
         TheaterRoomStateInstance = new TheaterRoomState(this);
+        LibraryRoomEntranceStateInstance = new LibraryRoomEntranceState(this);
         LibraryRoomStateInstance = new LibraryRoomState(this);
     }
 
@@ -44,7 +47,6 @@ public class SceneState : StateMachine
 
     public void GoLeft()
     {
-        //not returning correct state, returning only 1st state
         BaseState currentState = CurrentState;
         Debug.Log("Executing SceneState Go Left");
 
@@ -85,6 +87,11 @@ public class SceneState : StateMachine
                 ServersRoomVentStateInstance.GoRight();
                 break;
 
+            case "LibraryRoomState":
+                if (_doorManagerInstance.IsLibraryKeyEquipped && !UIManager.Instance.IsLibraryLocked)
+                    LibraryRoomStateInstance.GoRight();
+                break;
+
             default:
                 break;
         }
@@ -107,6 +114,11 @@ public class SceneState : StateMachine
 
             case "TheaterDoorState":
                 TheaterDoorStateInstace.GoForward();
+                break;
+
+            case "LibraryRoomEntranceState":
+                if (_doorManagerInstance.IsLibraryKeyEquipped && !UIManager.Instance.IsLibraryLocked)
+                    LibraryRoomEntranceStateInstance.GoForward();
                 break;
 
             default:
@@ -139,6 +151,10 @@ public class SceneState : StateMachine
 
             case "TheaterRoomState":
                 TheaterRoomStateInstance.GoBackwards();
+                break;
+
+            case "LibraryRoomEntranceState":
+                LibraryRoomEntranceStateInstance.GoForward();
                 break;
 
             case "LibraryRoomState":

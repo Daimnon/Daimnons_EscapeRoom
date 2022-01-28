@@ -5593,6 +5593,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _buttons: {fileID: 529958620}
+  playerTransform: {fileID: 982909037}
   sensitivity: 2
   yRotationLimit: 88
   xRotationLimit: 88

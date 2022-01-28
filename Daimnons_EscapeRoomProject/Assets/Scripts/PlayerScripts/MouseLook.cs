@@ -8,6 +8,7 @@ public class MouseLook : MonoBehaviour
 	public float Sensitivity { get => _sensitivity; set => _sensitivity = value; }
 
 	[SerializeField] GameObject _buttons;
+	[SerializeField] Transform playerTransform;
 
 	[SerializeField] [Range(0.1f, 9f)]
 	private float sensitivity = 2f;
@@ -23,6 +24,7 @@ public class MouseLook : MonoBehaviour
 
 	private Vector2 rotation = Vector2.zero;
 
+
     private void Update()
 	{
 		Cursor.visible = true;
@@ -31,6 +33,7 @@ public class MouseLook : MonoBehaviour
 		if (Input.GetKey(KeyCode.LeftShift))
 			LookAround();
 	}
+
 
 	private void LookAround()
 	{

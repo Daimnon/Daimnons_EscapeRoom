@@ -1,14 +1,14 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine.SceneManagement;
-using UnityEngine.UI;
 using UnityEngine;
 
 public class MainMenuEvents : MonoBehaviour
 {
+    #region Serialized Fields
     [SerializeField]
     private GameObject _menuPanel, _ControlsPanel, _CreditsPanel;
+    #endregion
 
+    #region Unity Events
     public void Play()
     {
         SceneManager.LoadScene(1);
@@ -39,4 +39,5 @@ public class MainMenuEvents : MonoBehaviour
             _menuPanel.SetActive(true);
         }
     }
+    #endregion
 }

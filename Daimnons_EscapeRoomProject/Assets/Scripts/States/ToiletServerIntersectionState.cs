@@ -1,28 +1,13 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class ToiletServerIntersectionState : BaseState
 {
-    //get references
-    #region Serialized Fields
-    [SerializeField]
-    private Camera _mainCam;
-
-    [SerializeField]
-    private Transform _mainCamTr;
-
-    [SerializeField]
-    private Collider _playerCol;
-    #endregion
-
-    //movement inputs
-    private float _horizontalInput;
-    private float _verticalInput;
-
+    #region Constructor
     //constructor that impliments "StateB" and sM parameters to base constructor
     public ToiletServerIntersectionState(SceneState sM) : base("ToiletServerIntersectionState", sM) { }
+    #endregion
 
+    #region Overrides
     //when starting state
     public override void Enter()
     {
@@ -32,17 +17,13 @@ public class ToiletServerIntersectionState : BaseState
         (CurrentStateMachine as SceneState).PlayerTr.rotation = Quaternion.Euler(0f, -90f, 0f);
         (CurrentStateMachine as SceneState).PlayerTr.localScale = new Vector3(1.5f, 2, 1.5f);
 
-        _horizontalInput = 0f;
-        _verticalInput = 0f;
+        (CurrentStateMachine as SceneState)._mouseLook.rotation = new Vector2(-90f, 0f);
     }
 
     //when updating state
     public override void UpdateLogic()
     {
         base.UpdateLogic();
-        _horizontalInput = Input.GetAxis("Horizontal");
-        _verticalInput = Input.GetAxis("Vertical");
-
         Hacks();
     }
 
@@ -56,7 +37,9 @@ public class ToiletServerIntersectionState : BaseState
         //
         //_sS.PlayerRb.velocity = velocity;
     }
+    #endregion
 
+    #region QuickHacks
     public void Hacks()
     {
         //lobby state quickhack
@@ -78,7 +61,9 @@ public class ToiletServerIntersectionState : BaseState
         if (Input.GetKey(KeyCode.Alpha6))
             CurrentStateMachine.ChangeState(((SceneState)CurrentStateMachine).LibraryRoomStateInstance);
     }
+    #endregion
 
+    #region Unity Events
     public void GoLeft()
     {
         Debug.Log("Executed Server-Toilet Intersection Go Left");
@@ -96,4 +81,5 @@ public class ToiletServerIntersectionState : BaseState
         Debug.Log("Executed Server-Toilet Intersection Go Backwards");
         CurrentStateMachine.ChangeState(((SceneState)CurrentStateMachine).LobbyStateInstance);
     }
+    #endregion
 }

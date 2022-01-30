@@ -56,7 +56,7 @@ public class UIManager : MonoBehaviour
 
     private void Awake()
     {
-            _instance = this;
+        _instance = this;
 
         foreach (Image image in AllImages)
             image.enabled = false; // turn off to test, current working subject is blue key, current test subject is red key
@@ -137,13 +137,13 @@ public class UIManager : MonoBehaviour
         }
     }
 
-    public IEnumerator DisplayLogText(string input)
+    public IEnumerator UpdateLog(string input)
     {
         _logText.text = input;
         yield return new WaitForSeconds(3f);
 
-        print("waited 3 seconds");
-        _logText.text = "something";
+        //print("waited 3 seconds");
+        //_logText.text = "something";
     }
     #endregion
 }

@@ -1,12 +1,16 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class StateMachine : MonoBehaviour
 {
+    #region Fields
     private BaseState _currentState;
-    public BaseState CurrentState { get => _currentState; }
+    #endregion
 
+    #region Properties
+    public BaseState CurrentState { get => _currentState; }
+    #endregion
+
+    #region Unity Callbacks
     void Start()
     {
         _currentState = GetInitialState();
@@ -26,7 +30,16 @@ public class StateMachine : MonoBehaviour
         if (_currentState != null)
             _currentState.UpdatePhysics();
     }
+    #endregion
 
+    #region Virtual Methods
+    protected virtual BaseState GetInitialState()
+    {
+        return null;
+    }
+    #endregion
+
+    #region Methods
     public void ChangeState(BaseState newState)
     {
         _currentState.Exit();
@@ -34,16 +47,13 @@ public class StateMachine : MonoBehaviour
         _currentState = newState;
         _currentState.Enter();
     }
+    #endregion
 
-    protected virtual BaseState GetInitialState()
-    {
-        return null;
-    }
-
-
+    #region Testings
     private void OnGUI()
     {
         string txt = _currentState != null ? _currentState.Name : "(No Current State)";
         GUILayout.Label($"<color='black'><size=40>{txt}</size></color>");
     }
+    #endregion
 }

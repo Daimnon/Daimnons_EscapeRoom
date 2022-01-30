@@ -1,56 +1,56 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class MouseLook : MonoBehaviour
 {
-	private float _sensitivity;
-	public float Sensitivity { get => _sensitivity; set => _sensitivity = value; }
-
-	[SerializeField] GameObject _buttons;
-	[SerializeField] Transform playerTransform;
+    #region Serialized Fields
+    [SerializeField]
+	private GameObject _transitionButtons;
 
 	[SerializeField] [Range(0.1f, 9f)]
-	private float sensitivity = 2f;
+	private float _sensitivity; //sensetivty 2 is best
+    #endregion
 
-    [SerializeField] [Range(0f, 90f)]
-    float yRotationLimit = 88f;
-
-    [SerializeField] [Range(0f, 90f)]
-    float xRotationLimit = 88f;
-
-	private const string xAxis = "Mouse X"; //Strings in direct code generate garbage, storing and re-using them creates no garbage
+    #region Fields
+    //strings in direct code generate garbage, storing and re-using them doesn't garbage
+    private const string xAxis = "Mouse X";
 	private const string yAxis = "Mouse Y";
+    #endregion
 
-	private Vector2 rotation = Vector2.zero;
+    #region Public Fields
+    [HideInInspector]
+	public Vector2 rotation = Vector2.zero;
+    #endregion
 
-
+    #region Unity Callbacks
     private void Update()
 	{
 		Cursor.visible = true;
-		_buttons.SetActive(true);
+		_transitionButtons.SetActive(true);
 
 		if (Input.GetKey(KeyCode.LeftShift))
 			LookAround();
 	}
+    #endregion
 
-
-	private void LookAround()
+    #region Methods
+    public void LookAround()
 	{
 		Cursor.visible = false;
-		_buttons.SetActive(false);
+		_transitionButtons.SetActive(false);
 
-		rotation.x += Input.GetAxis(xAxis) * sensitivity;
-		rotation.y += Input.GetAxis(yAxis) * sensitivity;
+        //calculate sensetivity
+        rotation.x += Input.GetAxis(xAxis) * _sensitivity;
+		rotation.y += Input.GetAxis(yAxis) * _sensitivity;
 
-        rotation.x = Mathf.Clamp(rotation.x, -xRotationLimit, xRotationLimit);
-        rotation.y = Mathf.Clamp(rotation.y, -yRotationLimit, yRotationLimit);
+        //get directions
+        Quaternion xQuat = Quaternion.AngleAxis(rotation.x, Vector3.up);
+        Quaternion yQuat = Quaternion.AngleAxis(rotation.y, Vector3.left);
 
-        var xQuat = Quaternion.AngleAxis(rotation.x, Vector3.up);
-        var yQuat = Quaternion.AngleAxis(rotation.y, Vector3.left);
+        //Quaternions seem to rotate more consistently than EulerAngles. sensitivity seemed to change slightly at certain degrees using "Euler.transform.localEulerAngles = new Vector3(-rotation.y, rotation.x, 0)"
+        transform.localRotation = xQuat * yQuat;
 
-        transform.localRotation = xQuat * yQuat; //Quaternions seem to rotate more consistently than EulerAngles. Sensitivity seemed to change slightly at certain degrees using Euler. transform.localEulerAngles = new Vector3(-rotation.y, rotation.x, 0);
+        Debug.Log(new Vector2(transform.localRotation.x, transform.localRotation.y));
     }
-	
+    #endregion
 }
 

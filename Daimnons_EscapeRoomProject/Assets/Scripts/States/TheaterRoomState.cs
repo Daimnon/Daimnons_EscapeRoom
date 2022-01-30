@@ -1,12 +1,13 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class TheaterRoomState : BaseState
 {
+    #region Constructor
     //constructor that impliments "StatA" and sM parameters to base constructor
     public TheaterRoomState(SceneState sM) : base("TheaterRoomState", sM) { }
+    #endregion
 
+    #region Overrides
     //when starting state
     public override void Enter()
     {
@@ -14,9 +15,11 @@ public class TheaterRoomState : BaseState
 
         (CurrentStateMachine as SceneState).IsCurrentState = true;
 
-        (CurrentStateMachine as SceneState).PlayerTr.position = new Vector3(44f, -2.5f, -10f);
-        (CurrentStateMachine as SceneState).PlayerTr.rotation = Quaternion.Euler(15f, 90f, 0f);
+        (CurrentStateMachine as SceneState).PlayerTr.position = new Vector3(44f, -5.5f, -10f);
+        (CurrentStateMachine as SceneState).PlayerTr.rotation = Quaternion.Euler(-7.5f, 90f, 0f);
         (CurrentStateMachine as SceneState).PlayerTr.localScale = new Vector3(1.5f, 2, 1.5f);
+
+        (CurrentStateMachine as SceneState)._mouseLook.rotation = new Vector3(90f, 0f);
     }
 
     //when updating state
@@ -37,7 +40,9 @@ public class TheaterRoomState : BaseState
 
         (CurrentStateMachine as SceneState).IsCurrentState = false;
     }
+    #endregion
 
+    #region QuickHacks
     public void Hacks()
     {
         //lobby state quickhack
@@ -56,10 +61,13 @@ public class TheaterRoomState : BaseState
         if (Input.GetKey(KeyCode.Alpha5))
             CurrentStateMachine.ChangeState(((SceneState)CurrentStateMachine).TheaterRoomStateInstance);
     }
+    #endregion
 
+    #region Unity Events
     public void GoBackwards()
     {
         Debug.Log("Executed Lobby Go Left");
         CurrentStateMachine.ChangeState(((SceneState)CurrentStateMachine).LobbyStateInstance);
     }
+    #endregion
 }

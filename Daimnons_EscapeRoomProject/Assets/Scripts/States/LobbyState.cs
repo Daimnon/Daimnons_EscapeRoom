@@ -1,13 +1,13 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class LobbyState : BaseState
 {
-
+    #region Constructor
     //constructor that impliments "StatA" and sM parameters to base constructor
     public LobbyState(SceneState sM) : base("LobbyState", sM) { }
+    #endregion
 
+    #region Overrides
     //when starting state
     public override void Enter()
     {
@@ -38,7 +38,9 @@ public class LobbyState : BaseState
 
         (CurrentStateMachine as SceneState).IsCurrentState = false;
     }
+    #endregion
 
+    #region QuickHacks
     public void Hacks()
     {
         //lobby state quickhack
@@ -60,7 +62,9 @@ public class LobbyState : BaseState
         if (Input.GetKey(KeyCode.Alpha6))
             CurrentStateMachine.ChangeState(((SceneState)CurrentStateMachine).LibraryRoomStateInstance);
     }
+    #endregion
 
+    #region Unity Events
     public void GoLeft()
     {
         Debug.Log("Executed Lobby Go Left");
@@ -78,4 +82,5 @@ public class LobbyState : BaseState
         Debug.Log("Executed Lobby Go Left");
         CurrentStateMachine.ChangeState(((SceneState)CurrentStateMachine).LibraryRoomEntranceStateInstance);
     }
+    #endregion
 }

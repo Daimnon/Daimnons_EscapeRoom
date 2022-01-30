@@ -1,12 +1,9 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using TMPro;
-
 
 public class Collectible : MonoBehaviour
 {
+    #region Serialized Fields
     [SerializeField]
     private UIManager _uiManager;
 
@@ -18,10 +15,14 @@ public class Collectible : MonoBehaviour
 
     [SerializeField]
     private bool _isItemAcquired = false;
+    #endregion
 
+    #region Fields
     private Vector3 _originalImagePos;
     private int _currentCycleIndex = 0;
+    #endregion
 
+    #region Unity Callbacks
     private void Awake()
     {
         _originalImagePos = _equippedSlotImage.transform.position;
@@ -31,17 +32,20 @@ public class Collectible : MonoBehaviour
     {
         Debug.Log($"Trying to collect {gameObject.name}");
         _isItemAcquired = true;
+
         Destroy(gameObject);
         Collect();
     }
+    #endregion
 
+    #region Methods
     public void Collect()
     {
         _currentCycleIndex = _itemId;
         _currentCycleIndex = Mathf.Clamp(_currentCycleIndex, 0, UIManager.Instance.AllCollectibles.Count - 1);
 
         Debug.Log(_currentCycleIndex);
-        StartCoroutine(_uiManager.DisplayLogText($"Collected: {gameObject.name}"));
+        StartCoroutine(_uiManager.UpdateLog($"Collected: {gameObject.name}"));
 
         CollectGo();
         ShowImage();
@@ -58,4 +62,5 @@ public class Collectible : MonoBehaviour
         if (_isItemAcquired)
             UIManager.Instance.AllImages[_currentCycleIndex].enabled = true;
     }
+    #endregion
 }

@@ -7,7 +7,7 @@ using UnityEngine;
 
 public class SceneState : StateMachine
 {
-
+    #region States Referances
     public LobbyState LobbyStateInstance;
     public ToiletServerIntersectionState ToiletServerIntersectionInstance;
     public ToiletsRoomState ToiletsRoomInstance;
@@ -17,18 +17,22 @@ public class SceneState : StateMachine
     public TheaterRoomState TheaterRoomStateInstance;
     public LibraryRoomEntranceState LibraryRoomEntranceStateInstance;
     public LibraryRoomState LibraryRoomStateInstance;
+    #endregion
 
-    public List<GameObject> InteractableGO;
-    public List<Interactable> InteractableGOScripts;
+    #region Serialized Fields
+    [SerializeField]
+    private DoorManager _doorManagerInstance;
+    #endregion
 
-    [Header("Refrences")]
-    [SerializeField] private DoorManager _doorManagerInstance;
+    #region Public Fields
+    public MouseLook _mouseLook;
     public Transform MainCamTr, PlayerTr;
     public Button LeftArrowUI, RightArrowUI;
-    public MouseLook playerMouseLook;
-
+    
     public bool IsCurrentState;
+    #endregion
 
+    #region Unity Callbacks
     private void Awake()
     {
         LobbyStateInstance = new LobbyState(this);
@@ -41,12 +45,16 @@ public class SceneState : StateMachine
         LibraryRoomEntranceStateInstance = new LibraryRoomEntranceState(this);
         LibraryRoomStateInstance = new LibraryRoomState(this);
     }
+    #endregion
 
+    #region Overrides
     protected override BaseState GetInitialState()
     {
         return LobbyStateInstance;
     }
+    #endregion
 
+    #region Unity Events
     public void GoLeft()
     {
         BaseState currentState = CurrentState;
@@ -60,6 +68,10 @@ public class SceneState : StateMachine
 
             case "ToiletServerIntersectionState":
                 ToiletServerIntersectionInstance.GoLeft();
+                break;
+
+            case "ServersRoomVentState":
+                ServersRoomVentStateInstance.GoLeft();
                 break;
 
             default:
@@ -167,4 +179,5 @@ public class SceneState : StateMachine
                 break;
         }
     }
+    #endregion
 }

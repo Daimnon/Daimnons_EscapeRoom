@@ -1,12 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
 public class LibraryRoomState : BaseState
 {
+    #region Constructor
     //constructor that impliments "StatA" and sM parameters to base constructor
     public LibraryRoomState(SceneState sM) : base("LibraryRoomState", sM) { }
+    #endregion
 
+    #region Overrides
     //when starting state
     public override void Enter()
     {
@@ -17,6 +19,8 @@ public class LibraryRoomState : BaseState
         (CurrentStateMachine as SceneState).PlayerTr.position = new Vector3(-23f, 3.5f, 36f);
         (CurrentStateMachine as SceneState).PlayerTr.rotation = Quaternion.Euler(0f, 105f, 0f);
         (CurrentStateMachine as SceneState).PlayerTr.localScale = new Vector3(1.5f, 2, 1.5f);
+
+        (CurrentStateMachine as SceneState)._mouseLook.rotation = new Vector2(105f, 0f);
     }
 
     //when updating state
@@ -33,7 +37,9 @@ public class LibraryRoomState : BaseState
 
         (CurrentStateMachine as SceneState).IsCurrentState = false;
     }
+    #endregion
 
+    #region QuickHacks
     public void Hacks()
     {
         //lobby state quickhack
@@ -55,7 +61,9 @@ public class LibraryRoomState : BaseState
         if (Input.GetKey(KeyCode.Alpha6))
             CurrentStateMachine.ChangeState(((SceneState)CurrentStateMachine).LibraryRoomStateInstance);
     }
+    #endregion
 
+    #region Unity Events
     public void GoRight()
     {
         Debug.Log("Executed Lobby Go Left");
@@ -68,4 +76,5 @@ public class LibraryRoomState : BaseState
         Debug.Log("Executed Lobby Go Left");
         CurrentStateMachine.ChangeState(((SceneState)CurrentStateMachine).ServersRoomVentStateInstance);
     }
+    #endregion
 }

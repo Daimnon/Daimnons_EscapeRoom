@@ -1,28 +1,14 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+
 // fix buttons func in relation to rotation
 public class ServersRoomState : BaseState
 {
-    //get references
-    #region Serialized Fields
-    [SerializeField]
-    private Camera _mainCam;
-
-    [SerializeField]
-    private Transform _mainCamTr;
-
-    [SerializeField]
-    private Collider _playerCol;
-    #endregion
-
-    //movement inputs
-    private float _horizontalInput;
-    private float _verticalInput;
-
+    #region Constructor
     //constructor that impliments "StateD" and sM parameters to base constructor
     public ServersRoomState(SceneState sM) : base("ServersRoomState", sM) { }
+    #endregion
 
+    #region Overrides
     //when starting state
     public override void Enter()
     {
@@ -32,20 +18,19 @@ public class ServersRoomState : BaseState
         (CurrentStateMachine as SceneState).PlayerTr.rotation = Quaternion.Euler(0f, -90f, 0f);
         (CurrentStateMachine as SceneState).PlayerTr.localScale = new Vector3(1.5f, 2, 1.5f);
 
-        _horizontalInput = 0f;
-        _verticalInput = 0f;
+        (CurrentStateMachine as SceneState)._mouseLook.rotation = new Vector2(-90f, 0f);
     }
 
     //when updating state
     public override void UpdateLogic()
     {
         base.UpdateLogic();
-        _horizontalInput = Input.GetAxis("Horizontal");
-        _verticalInput = Input.GetAxis("Vertical");
 
         Hacks();
     }
+    #endregion
 
+    #region QuickHacks
     public void Hacks()
     {
         //lobby state quickhack
@@ -67,16 +52,20 @@ public class ServersRoomState : BaseState
         if (Input.GetKey(KeyCode.Alpha6))
             CurrentStateMachine.ChangeState(((SceneState)CurrentStateMachine).LibraryRoomStateInstance);
     }
+    #endregion
+
+    #region Unity Events
 
     public void GoForward()
     {
-        Debug.Log("Executed Toilets Room Go Right");
+        Debug.Log("Executed Servers Room Go Forward");
         CurrentStateMachine.ChangeState(((SceneState)CurrentStateMachine).ServersRoomVentStateInstance);
     }
 
     public void GoBackwards()
     {
-        Debug.Log("Executed Toilets Room Go Right");
+        Debug.Log("Executed Servers Room Go Backwards");
         CurrentStateMachine.ChangeState(((SceneState)CurrentStateMachine).ToiletServerIntersectionInstance);
     }
+    #endregion
 }

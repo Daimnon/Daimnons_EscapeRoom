@@ -1,6 +1,5 @@
 using UnityEngine;
 
-// fix buttons func in relation to rotation
 public class ServersRoomState : BaseState
 {
     #region Constructor

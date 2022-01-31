@@ -1,9 +1,5 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine.UI;
 using UnityEngine;
-
-// Fix library interaction
 
 public class SceneState : StateMachine
 {

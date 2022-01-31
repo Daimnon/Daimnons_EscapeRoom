@@ -54,6 +54,7 @@ public class UIManager : MonoBehaviour
     public bool IsLibraryLocked = true;
     #endregion
 
+    #region Unity Callbacks
     private void Awake()
     {
         _instance = this;
@@ -66,6 +67,7 @@ public class UIManager : MonoBehaviour
 
         lastSelectedGameObject = CurrentSelectedGameObject;
     }
+    #endregion
 
     #region Methods
     // Try to get last listener
@@ -100,16 +102,6 @@ public class UIManager : MonoBehaviour
     {
         GetLastGameObjectSelected(); // Try to get last listener
 
-        //Trying to make sure that when pressing another item the equipped slot gets cleared before equipping a new one
-        //if (lastSelectedGameObject != null && EquippedItemSlotImage.name.ToLower() != "equippeditemslot")
-        //{
-        //    lastSelectedGameObject.transform.SetParent(_inventoryPanel.gameObject.transform);
-        //    lastSelectedGameObject.transform.position = _originalImagesPosition[_originalImagesPosition.Count];
-        //}
-
-
-        // currently sometimes need to press twice on item which is not the first equipped
-
         if (!_isItemEquipped)
         {
             Debug.Log("equip");
@@ -141,9 +133,6 @@ public class UIManager : MonoBehaviour
     {
         _logText.text = input;
         yield return new WaitForSeconds(3f);
-
-        //print("waited 3 seconds");
-        //_logText.text = "something";
     }
     #endregion
 }

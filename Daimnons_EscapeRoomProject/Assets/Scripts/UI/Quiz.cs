@@ -14,7 +14,6 @@ public class Quiz : MonoBehaviour
     #region Unity Events
     public void DropKey()
     {
-        //_questionText.transform.position -= new Vector3(_questionText.transform.position.x, _questionText.transform.position.y - 10, _questionText.transform.position.z);
         _questionText.fontSize = 3;
         _questionText.text = "Correct!";
         _allAnswers.SetActive(false);
